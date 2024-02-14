@@ -1,0 +1,7 @@
+#Temp Files
+*.gz
+*.pdf
+*.log
+*.fls
+*.fdb_latexmk
+*.aux
