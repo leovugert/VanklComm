@@ -688,7 +688,16 @@ There are 4 main modules that are going to be implemented in VanklComm. These mo
 \label{ssub:access_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-AC}1. ]
-	\item 
+	\item User must be logged into the application to access any information.
+	\\\textbf{Rationale:} This is to ensure that only users that have verified their credentials have access to any potentially sensitive information or features.
+	\item User must be a part of the company verified list.
+	\\\textbf{Rationale:} For a user to join any chats or \textcolor{red}{announcement boards} they must be a verified member of the company that oversees the chats.
+	\item User must not have access to ant chats, \textcolor{red}{files or announcements} that they do not belong to.
+	\\\textbf{Rationale:} To maintain the secure aspect of the application, only users that belong to certain chats, \textcolor{red}{files or announcements} may view them.
+	\item User must consent to have their location being used.
+	\\\textbf{Rationale:} To ensure that the user is within a \textcolor{red}{verified geolocation}, the app needs permission to use their GPS location to determine if the location is verified.
+	\item User must consent to have their biometric data being used.
+	\\\textbf{Rationale:} To utilize \textcolor{red}{biometric data for effective two-factor authentication}, the app needs permission to use the biometric data to determine if the user is who they say they are. 
 \end{enumerate}
 % End SubSubSection
 
@@ -696,7 +705,13 @@ There are 4 main modules that are going to be implemented in VanklComm. These mo
 \label{ssub:integrity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-INT}1. ]
-	\item 
+	\item The system will use an industry accepted end-to-end symmetric-key cryptosystem algorithm.
+	\\\textbf{Rationale:} To ensure that the messages being sent back and forth are not being modified in the middle, an end-to-end encryption is necessary. The algorithm to be used will be one of the industry standard algorithms (AES, 3-DES) [8].
+	\item Chat logs will be stored separately from the rest of the system.
+	\\\textbf{Rationale:} To ensure that the chat logs are not tampered with, they will be stored on a database that is separate from the system that only admins have access to.
+	\item Users should not change their name unless company allows it.
+	\\\textbf{Rationale:} To verify that users know who they are chatting to, users should not be allowed to change their name unless given permission by the company.
+
 \end{enumerate}
 % End SubSubSection
 
@@ -704,7 +719,13 @@ There are 4 main modules that are going to be implemented in VanklComm. These mo
 \label{ssub:privacy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-P}1. ]
-	\item 
+	\item The application will adhere to the Google Play Developer Distribution Agreement.
+	\\\textbf{Rationale:} As this app is going to be developed for android, adhering to the GPDDA is a step to ensure that privacy is being kept [9].
+	\item Personal information of users should not be displayed to anyone outside of themselves.
+	\\\textbf{Rationale:} To keep information such as age, gender, an employees department, etc. private, this information should not be displayed to those they are chatting to.
+	\item Notifications should not display message content.
+	\\\textbf{Rationale:} To maintain the purpose of secure communication, notifications should not contain sensitive information, and rather have a message similar to “you have a notification from VanklComm, you have 8 unread messages”.
+
 \end{enumerate}
 % End SubSubSection
 
@@ -712,7 +733,8 @@ There are 4 main modules that are going to be implemented in VanklComm. These mo
 \label{ssub:audit_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-AU}1. ]
-	\item 
+	\item The app must comply with company guidelines for auditing employee chats.
+	\\\textbf{Rationale:} To allow for the company to regulate the chats that their employee’s send, the app must provide a way for them to audit effectively. 
 \end{enumerate}
 % End SubSubSection
 
@@ -720,7 +742,8 @@ There are 4 main modules that are going to be implemented in VanklComm. These mo
 \label{ssub:immunity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-IM}1. ]
-	\item 
+	\item Verify with the KDC that the user is authorized.
+	\\\textbf{Rationale:} To protect against malware or bad actors, only users authorized by the KDC may use the app.
 \end{enumerate}
 % End SubSubSection
 
@@ -734,7 +757,13 @@ There are 4 main modules that are going to be implemented in VanklComm. These mo
 \label{ssub:cultural_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP-C}1. ]
-	\item 
+	\item No offensive imagery will be used in the composition of the app.
+	\\\textbf{Rationale:} To make the app a safe space for all users, any imagery that is known to be offensive to any group of people must be erased from the app.
+	\item The app will not send messages that contain inappropriate words.
+	\\\textbf{Rationale:} Using Google’s Word list [10] the use of inappropriate words will not be tolerated.
+	\item Users can report hateful and/or abusive language to the admin.
+	\\\textbf{Rationale:} In order to maintain the safety of users, any inappropriate messages not caught by the word list can be reported by a user.
+
 \end{enumerate}
 % End SubSubSection
 
@@ -742,7 +771,10 @@ There are 4 main modules that are going to be implemented in VanklComm. These mo
 \label{ssub:political_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP-P}1. ]
-	\item 
+	\item Users may only send direct messages to those who they are authorized to message.
+	\\\textbf{Rationale:} A low level factory worker should not be messaging the CEO unless they have permission granted to do so.
+	\item Employees may send a message request to those they are unauthorized to message.
+	\\\textbf{Rationale:} Similar to Facebook Messenger, if an employee is unauthorized, their message should go to a separate inbox that does not flood the receiver, but they can check to see the request.
 \end{enumerate}
 % End SubSubSection
 
@@ -756,7 +788,8 @@ There are 4 main modules that are going to be implemented in VanklComm. These mo
 \label{ssub:compliance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LR-COMP}1. ]
-	\item 
+	\item The app will be SMS compliant [11].
+	\\\textbf{Rationale:} To follow the law, the app must be SMS compliant as it is technically a text messaging service.
 \end{enumerate}
 % End SubSubSection
 
@@ -764,7 +797,8 @@ There are 4 main modules that are going to be implemented in VanklComm. These mo
 \label{ssub:standards_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LR-STD}1. ]
-	\item 
+	\item The app will comply with the Android App Quality Standards [12].
+	\\\textbf{Rationale:} To maintain good standards, the app will follow the standards given by Android.
 \end{enumerate}
 % End SubSubSection
 
