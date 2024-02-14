@@ -71,26 +71,29 @@
 \subsection{Purpose}
 \label{sub:purpose}
 % Begin SubSection
-This Software Requirement Specification has been created to specify the requirements needed to develop a secure communication app (VanklComm) for our organization. This SRS will ensure to cover functional requirements specifying how the app will perform the secure communication, including viewpoints from stakeholders and common business events and use cases and non-functional requirements outlining specifications of the system.
+This Software Requirement Specification has been created to specify the requirements needed to develop a secure communication app (VanklComm) for our organization. This SRS will ensure to cover functional requirements specifying how the app will perform the secure communication, including viewpoints from stakeholders and common business events and use cases and non-functional requirements outlining specifications of the system. Red text indicates a creative feature that goes beyond the project specifications.
 % End SubSection
 
 \subsection{Scope}
 \label{sub:scope}
 % Begin SubSection
-\begin{itemize}
-	\item Identify the software product(s) to be produced, and name each (e.g., Host DBMS, Report Generator, etc.)
-	\item Explain what the software product(s) will do (and, if necessary, also state what they will not do).
-	\item Describe the application of the software being specified, including relevant benefits, objectives, and goals.
-%	\item Be consistent with similar statements in higher-level specifications (e.g., the system requirements specification), if they exist
-\end{itemize}
+\par The software product that will be produced is VanklComm, a secure chat application on Android. The product will allow for all employees of a company to communicate in a secure fashion, while also storing all texts in a database for security.
+\\
+\par \noindent Users will be required to create an account on VanklComm and be verified by their company in order to begin chatting. The main function of the product is the person-to-person chat, however there will also be \textcolor{red}{announcement boards} that managers can use to notify all of their employees.
+\\
+\par \noindent An objective of the software is to provide companies with secure chatting that prevents espionage from employees. Another objective of the software is that it must be easy to use, so that employees will have an easy transition over to the service. The last objective of the software is the encryption service. The software will provide end-to-end encryption on messages sent and received, which is what provides the secure chat.
+
 % End SubSection
 
 \subsection{Definitions, Acronyms, and Abbreviations}
 \label{sub:definitions_acronyms_and_abbreviations}
 % Begin SubSection
 \begin{itemize}
-	\item Provide the definitions of all terms, acronyms, and abbreviations required to properly interpret the SRS.
-	\item This should be in alphabetical order.
+	\item API – Application Programming Interface  
+	\item ASDK – Android Software Developer Kit
+	\item KDC – Key Distribution Centre
+	\item VanklComm – Viro-Alex-Noah-Krish-Leo communication
+	
 \end{itemize}
 % End SubSection
 
@@ -98,21 +101,34 @@ This Software Requirement Specification has been created to specify the requirem
 \label{sub:references}
 % Begin SubSection
 \begin{itemize}
-	\item Provide a complete list of all documents referenced elsewhere in the SRS.
-	\item Identify each document by title, report number (if applicable), date, and publishing organization.
-	\item Specify the sources from which the references can be obtained.
-	\item Order this list in some sensible manner (alphabetical by author, or something else that makes more sense).
+	\item[[1]] D. Nichols, “Coloring for Colorblindness,” Davidmathlogic.com, 2019. 
+	\\Available: https://davidmathlogic.com/colorblind/\#\%23D81B60-\%231E88E5-\%23FFC107-\%23004D40
+	\item[[2]] FeDev, “Why is Dark Mode more than just a trend?,” Medium, Oct. 20, 2023. 
+	\\Available: https://bootcamp.uxdesign.cc/why-is-dark-mode-more-than-just-a-trend-224b8163acc6. Accessed: Feb. 14, 2024
+	\item[[3]] Washington University in St.Louis, “Performance Analysis of Data Encryption Algorithms,” Wustl.edu, 2022. 
+	Available: https://www.cs.wustl.edu/\~jain/cse567-06/ftp/encryption\_perf
+	\item[[4]] Oracle, “Response Time Analysis Made Easy in Oracle Database 10g,” Oracle.com, 2019. 
+	Available: https://www.oracle.com/technical-resources/articles/schumacher-analysis.html
+	\item[[5]] GPS.gov, “GPS.gov: GPS Accuracy,” Gps.gov, 2019. 
+	\\Available: https://www.gps.gov/systems/gps/performance/accuracy
+	\item[[6]] Federal Trade Commission, “Use Two-factor Authentication to Protect Your Accounts,” Consumer Advice, Sep. 12, 2022. 
+	Available: https://consumer.ftc.gov/articles/use-two-factor-authentication-protect-your-accounts\#:\~:text=Using\%20two\%2Dfactor\%20authentication\%20is
+	\item[[7]] “99.999\% Uptime: Ensuring 5 Nines Uptime - Stratus Technologies,” Stratus | Zero-touch Edge Computing. Available: https://www.stratus.com/about/company-information/uptime-meter/
+	\\\#:\~:text=Availability\%20is\%20normally\%20expressed\%20in
+	\item[[8]] L. Shinder and M. Cross, “Understanding Cybercrime Prevention,” Scene of the Cybercrime, pp. 505–554, 2008, doi: 10.1016/B978-1-59749-276-8.00012-1.
+	\item[[9]] “Google Play.” Accessed: Feb. 11, 2024. Online. 
+	Available: https://play.google.com/about/developer-distribution-agreement.html
+	\item[[10]] “Word list  |  Google developer documentation style guide  |  Google for Developers.” Accessed: Feb. 11, 2024. Online. Available: https://developers.google.com/style/word-list
+	\item[[11]] “SMS Compliance: A Comprehensive Look | Text-Em-All.” Accessed: Feb. 11, 2024. Online. Available: https://www.text-em-all.com/sms-compliance
+	\item[[12]] “Android App Quality Standards According to Google | by Badr Kouki | The Startup | Medium.” Accessed: Feb. 11, 2024. Online. Available: https://medium.com/swlh/android-app-quality-standards-according-to-google-5144137735b7
+
 \end{itemize}
 % End SubSection
 
 \subsection{Overview}
 \label{sub:overview}
 % Begin SubSection
-\begin{itemize}
-	\item Describe what the remainder of the document/SRS contains.\\
-	(e.g. "Section 2 discusses...Section 3...")
-%	\item Explain how the SRS is organized
-\end{itemize}
+Section 2 provides an overview of the product’s description in terms of the general factors that affect the product and its requirements. Section 3 includes our product’s use case diagram that visually describes the actions taken by the system’s actors to achieve a certain goal. Section 4 discusses all scenarios that are triggered by business events, organized by different viewpoints. Section 5 lists out the product’s non-functional requirements along with their rationale.
 % End SubSection
 
 % End Section
@@ -142,18 +158,92 @@ This Software Requirement Specification has been created to specify the requirem
 \subsection{Product Functions}
 \label{sub:product_functions}
 % Begin SubSection
-\begin{itemize}
-	\item Provide a \emph{summary} of the major functions that the software will perform.
-	\begin{itemize}
-		\item \textbf{Example}: An SRS for an accounting program may use this part to address customer account maintenance, customer statement, and invoice preparation without mentioning the vast amount of detail that each of those functions requires.
-	\end{itemize}
-	\item Functions should be organized in a way that makes the list of functions understandable to the customer or to anyone else reading the document for the first time 
-	\item Present the functions in a list format - each item should be one function, with a brief description of it
-	\item Textual or graphical methods can be used to show the different functions and their relationships
-	\begin{itemize}
-		\item Such a diagram is not intended to show a design of a product, but simply shows the logical relationships among variables
-	\end{itemize} 
-\end{itemize}
+There are 4 main modules that are going to be implemented in VanklComm. These modules are the Communication module, the Account Management module, the Cryptography module, and the Database module. The Communication module will oversee most of the business value of the application, which includes chatting. The Account Management module will deal with creation and deletion of accounts, as well as implementing the company structure and verifying that the agents are authorized. The Cryptography module will deal with message encryption and decryption. The Database module will oversee how the chat logs are stored.
+
+\begin{center}
+		\begin{tabular}{| p{4cm} | p{13cm} |}
+			\hline
+			\textbf{Module} & \textbf{Function} \\
+			\hline
+			Communication Module & 
+			\begin{itemize} 
+				\item Connect to chat 
+				\begin{itemize} 
+					\item Allows user to connect to the chat 
+				\end{itemize}
+				\item Send and receive messages
+				\begin{itemize}
+					\item Allows user to send and receive messages from other users
+				\end{itemize}
+				\item[\textcolor{red}{•}] \textcolor{red}{Send and receive files
+				\begin{itemize}
+					\item Allows user to send and receive files from other users
+				\end{itemize}
+				\item Receive announcement board posts
+				\begin{itemize}
+					\item Allows user to receive messages from managers through the announcement board
+				\end{itemize}
+				}
+				\item Report inappropriate messages
+				\begin{itemize}
+					\item Allows user to report inappropriate messages to admin
+				\end{itemize}
+			\end{itemize} \\
+			\hline
+			Account Management Module & 
+			\begin{itemize} 
+				\item Create account
+				\begin{itemize} 
+					\item Allows user to create account
+				\end{itemize}
+				\item Delete account
+				\begin{itemize}
+					\item Allows user to delete account
+				\end{itemize}
+				\item[\textcolor{red}{•}] \textcolor{red}{Create a contact list
+				\begin{itemize}
+					\item Allows user to have a contact list with their frequently contacted co-workers
+				\end{itemize}
+				\item Manage Geolocation
+				\begin{itemize}
+					\item Verifies that user is in the correct location
+				\end{itemize}
+				}
+				\item Verify agents are authorized
+				\begin{itemize}
+					\item Oversees correct user credentials to allow signing in
+					\item[\textcolor{red}{–}] \textcolor{red}{Verify user using biometrics}
+				\end{itemize}
+			\end{itemize} \\
+			\hline
+			Cryptography Module & 
+			\begin{itemize} 
+				\item Manage the KDC
+				\begin{itemize} 
+					\item Ensures that the KDC works as expected
+				\end{itemize}
+				\item Encrypt sent messages
+				\begin{itemize}
+					\item Encrypts the sent messages
+				\end{itemize}
+				\item Decrypt received messages
+				\begin{itemize}
+					\item Decrypts the received messages
+				\end{itemize}
+			\end{itemize} \\
+			\hline	
+			Database Module & 
+			\begin{itemize} 
+				\item Store chat logs
+				\begin{itemize} 
+					\item Stores all chat logs in a secure database
+				\end{itemize}
+			\end{itemize} \\
+			\hline	
+		\end{tabular}
+
+	\includegraphics[scale = 0.8]{3A04_D1.png}
+\end{center}
 % End SubSection
 
 \subsection{User Characteristics}

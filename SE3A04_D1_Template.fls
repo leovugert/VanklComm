@@ -317,6 +317,11 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 OUTPUT SE3A04_D1_Template.pdf
 INPUT c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT ./3A04_D1.png
+INPUT ./3A04_D1.png
+INPUT 3A04_D1.png
+INPUT ./3A04_D1.png
+INPUT ./3A04_D1.png
 INPUT SE3A04_D1_Template.aux
 INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
