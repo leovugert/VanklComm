@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.16)  14 FEB 2024 12:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.19)  14 FEB 2024 12:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/viro1/Documents/University/Eng3/SFWRENG 3A04/VanklComm/SE3A04_D1_Template.tex"
-(c:/Users/viro1/Documents/University/Eng3/SFWRENG 3A04/VanklComm/SE3A04_D1_Template.tex
+**c:/Users/noahg/VanklComm/SE3A04_D1_Template.tex
+(c:/Users/noahg/VanklComm/SE3A04_D1_Template.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2022-12-17> (c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2023-01-16> (c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
 (c:/texlive/2022/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
@@ -165,7 +165,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
  (c:/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count274
 \l__pdf_internal_box=\box53
 ) (./SE3A04_D1_Template.aux)
@@ -265,13 +265,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
 [4] [5] [6] [7] (./SE3A04_D1_Template.aux) ) 
 Here is how much of TeX's memory you used:
- 3567 strings out of 476093
- 54283 string characters out of 5795583
- 1860787 words of memory out of 5000000
- 23915 multiletter control sequences out of 15000+600000
+ 3567 strings out of 476091
+ 54164 string characters out of 5795540
+ 1861324 words of memory out of 5000000
+ 23917 multiletter control sequences out of 15000+600000
  520831 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,62p,541b,227s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,62p,500b,227s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
 Output written on SE3A04_D1_Template.pdf (7 pages, 118943 bytes).
 PDF statistics:
