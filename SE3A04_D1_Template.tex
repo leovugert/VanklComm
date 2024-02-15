@@ -72,26 +72,29 @@
 \subsection{Purpose}
 \label{sub:purpose}
 % Begin SubSection
-This Software Requirement Specification has been created to specify the requirements needed to develop a secure communication app (VanklComm) for our organization. This SRS will ensure to cover functional requirements specifying how the app will perform the secure communication, including viewpoints from stakeholders and common business events and use cases and non-functional requirements outlining specifications of the system.
+This Software Requirement Specification has been created to specify the requirements needed to develop a secure communication app (VanklComm) for our organization. This SRS will ensure to cover functional requirements specifying how the app will perform the secure communication, including viewpoints from stakeholders and common business events and use cases and non-functional requirements outlining specifications of the system. Red text indicates a creative feature that goes beyond the project specifications.
 % End SubSection
 
 \subsection{Scope}
 \label{sub:scope}
 % Begin SubSection
-\begin{itemize}
-	\item Identify the software product(s) to be produced, and name each (e.g., Host DBMS, Report Generator, etc.)
-	\item Explain what the software product(s) will do (and, if necessary, also state what they will not do).
-	\item Describe the application of the software being specified, including relevant benefits, objectives, and goals.
-	      %	\item Be consistent with similar statements in higher-level specifications (e.g., the system requirements specification), if they exist
-\end{itemize}
+\par The software product that will be produced is VanklComm, a secure chat application on Android. The product will allow for all employees of a company to communicate in a secure fashion, while also storing all texts in a database for security.
+\\
+\par \noindent Users will be required to create an account on VanklComm and be verified by their company in order to begin chatting. The main function of the product is the person-to-person chat, however there will also be \textcolor{red}{announcement boards} that managers can use to notify all of their employees.
+\\
+\par \noindent An objective of the software is to provide companies with secure chatting that prevents espionage from employees. Another objective of the software is that it must be easy to use, so that employees will have an easy transition over to the service. The last objective of the software is the encryption service. The software will provide end-to-end encryption on messages sent and received, which is what provides the secure chat.
+
 % End SubSection
 
 \subsection{Definitions, Acronyms, and Abbreviations}
 \label{sub:definitions_acronyms_and_abbreviations}
 % Begin SubSection
 \begin{itemize}
-	\item Provide the definitions of all terms, acronyms, and abbreviations required to properly interpret the SRS.
-	\item This should be in alphabetical order.
+	\item API – Application Programming Interface
+	\item ASDK – Android Software Developer Kit
+	\item KDC – Key Distribution Centre
+	\item VanklComm – Viro-Alex-Noah-Krish-Leo communication
+
 \end{itemize}
 % End SubSection
 
@@ -99,21 +102,34 @@ This Software Requirement Specification has been created to specify the requirem
 \label{sub:references}
 % Begin SubSection
 \begin{itemize}
-	\item Provide a complete list of all documents referenced elsewhere in the SRS.
-	\item Identify each document by title, report number (if applicable), date, and publishing organization.
-	\item Specify the sources from which the references can be obtained.
-	\item Order this list in some sensible manner (alphabetical by author, or something else that makes more sense).
+	\item[[1]] D. Nichols, “Coloring for Colorblindness,” Davidmathlogic.com, 2019.
+	\\Available: https://davidmathlogic.com/colorblind/\#\%23D81B60-\%231E88E5-\%23FFC107-\%23004D40
+	\item[[2]] FeDev, “Why is Dark Mode more than just a trend?,” Medium, Oct. 20, 2023.
+	\\Available: https://bootcamp.uxdesign.cc/why-is-dark-mode-more-than-just-a-trend-224b8163acc6. Accessed: Feb. 14, 2024
+	\item[[3]] Washington University in St.Louis, “Performance Analysis of Data Encryption Algorithms,” Wustl.edu, 2022.
+	Available: https://www.cs.wustl.edu/\~jain/cse567-06/ftp/encryption\_perf
+	\item[[4]] Oracle, “Response Time Analysis Made Easy in Oracle Database 10g,” Oracle.com, 2019.
+	Available: https://www.oracle.com/technical-resources/articles/schumacher-analysis.html
+	\item[[5]] GPS.gov, “GPS.gov: GPS Accuracy,” Gps.gov, 2019.
+	\\Available: https://www.gps.gov/systems/gps/performance/accuracy
+	\item[[6]] Federal Trade Commission, “Use Two-factor Authentication to Protect Your Accounts,” Consumer Advice, Sep. 12, 2022.
+	Available: https://consumer.ftc.gov/articles/use-two-factor-authentication-protect-your-accounts\#:\~:text=Using\%20two\%2Dfactor\%20authentication\%20is
+	\item[[7]] “99.999\% Uptime: Ensuring 5 Nines Uptime - Stratus Technologies,” Stratus | Zero-touch Edge Computing. Available: https://www.stratus.com/about/company-information/uptime-meter/
+	\\\#:\~:text=Availability\%20is\%20normally\%20expressed\%20in
+	\item[[8]] L. Shinder and M. Cross, “Understanding Cybercrime Prevention,” Scene of the Cybercrime, pp. 505–554, 2008, doi: 10.1016/B978-1-59749-276-8.00012-1.
+	\item[[9]] “Google Play.” Accessed: Feb. 11, 2024. Online.
+	Available: https://play.google.com/about/developer-distribution-agreement.html
+	\item[[10]] “Word list  |  Google developer documentation style guide  |  Google for Developers.” Accessed: Feb. 11, 2024. Online. Available: https://developers.google.com/style/word-list
+	\item[[11]] “SMS Compliance: A Comprehensive Look | Text-Em-All.” Accessed: Feb. 11, 2024. Online. Available: https://www.text-em-all.com/sms-compliance
+	\item[[12]] “Android App Quality Standards According to Google | by Badr Kouki | The Startup | Medium.” Accessed: Feb. 11, 2024. Online. Available: https://medium.com/swlh/android-app-quality-standards-according-to-google-5144137735b7
+
 \end{itemize}
 % End SubSection
 
 \subsection{Overview}
 \label{sub:overview}
 % Begin SubSection
-\begin{itemize}
-	\item Describe what the remainder of the document/SRS contains.\\
-	      (e.g. "Section 2 discusses...Section 3...")
-	      %	\item Explain how the SRS is organized
-\end{itemize}
+Section 2 provides an overview of the product’s description in terms of the general factors that affect the product and its requirements. Section 3 includes our product’s use case diagram that visually describes the actions taken by the system’s actors to achieve a certain goal. Section 4 discusses all scenarios that are triggered by business events, organized by different viewpoints. Section 5 lists out the product’s non-functional requirements along with their rationale.
 % End SubSection
 
 % End Section
@@ -142,18 +158,92 @@ The app will interface with Android APIs for biometric identification and geoloc
 \subsection{Product Functions}
 \label{sub:product_functions}
 % Begin SubSection
-\begin{itemize}
-	\item Provide a \emph{summary} of the major functions that the software will perform.
-	      \begin{itemize}
-		      \item \textbf{Example}: An SRS for an accounting program may use this part to address customer account maintenance, customer statement, and invoice preparation without mentioning the vast amount of detail that each of those functions requires.
-	      \end{itemize}
-	\item Functions should be organized in a way that makes the list of functions understandable to the customer or to anyone else reading the document for the first time
-	\item Present the functions in a list format - each item should be one function, with a brief description of it
-	\item Textual or graphical methods can be used to show the different functions and their relationships
-	      \begin{itemize}
-		      \item Such a diagram is not intended to show a design of a product, but simply shows the logical relationships among variables
-	      \end{itemize}
-\end{itemize}
+There are 4 main modules that are going to be implemented in VanklComm. These modules are the Communication module, the Account Management module, the Cryptography module, and the Database module. The Communication module will oversee most of the business value of the application, which includes chatting. The Account Management module will deal with creation and deletion of accounts, as well as implementing the company structure and verifying that the agents are authorized. The Cryptography module will deal with message encryption and decryption. The Database module will oversee how the chat logs are stored.
+
+\begin{center}
+	\begin{tabular}{| p{4cm} | p{13cm} |}
+		\hline
+		\textbf{Module}           & \textbf{Function}                   \\
+		\hline
+		Communication Module      &
+		\begin{itemize}
+			\item Connect to chat
+			      \begin{itemize}
+				      \item Allows user to connect to the chat
+			      \end{itemize}
+			\item Send and receive messages
+			      \begin{itemize}
+				      \item Allows user to send and receive messages from other users
+			      \end{itemize}
+			\item[\textcolor{red}{•}] \textcolor{red}{Send and receive files
+				\begin{itemize}
+					\item Allows user to send and receive files from other users
+				\end{itemize}
+			\item Receive announcement board posts
+			      \begin{itemize}
+				      \item Allows user to receive messages from managers through the announcement board
+			      \end{itemize}
+			      }
+			\item Report inappropriate messages
+			      \begin{itemize}
+				      \item Allows user to report inappropriate messages to admin
+			      \end{itemize}
+		\end{itemize} \\
+		\hline
+		Account Management Module &
+		\begin{itemize}
+			\item Create account
+			      \begin{itemize}
+				      \item Allows user to create account
+			      \end{itemize}
+			\item Delete account
+			      \begin{itemize}
+				      \item Allows user to delete account
+			      \end{itemize}
+			\item[\textcolor{red}{•}] \textcolor{red}{Create a contact list
+				\begin{itemize}
+					\item Allows user to have a contact list with their frequently contacted co-workers
+				\end{itemize}
+			\item Manage Geolocation
+			      \begin{itemize}
+				      \item Verifies that user is in the correct location
+			      \end{itemize}
+			      }
+			\item Verify agents are authorized
+			      \begin{itemize}
+				      \item Oversees correct user credentials to allow signing in
+				      \item[\textcolor{red}{–}] \textcolor{red}{Verify user using biometrics}
+			      \end{itemize}
+		\end{itemize}  \\
+		\hline
+		Cryptography Module       &
+		\begin{itemize}
+			\item Manage the KDC
+			      \begin{itemize}
+				      \item Ensures that the KDC works as expected
+			      \end{itemize}
+			\item Encrypt sent messages
+			      \begin{itemize}
+				      \item Encrypts the sent messages
+			      \end{itemize}
+			\item Decrypt received messages
+			      \begin{itemize}
+				      \item Decrypts the received messages
+			      \end{itemize}
+		\end{itemize}                                  \\
+		\hline
+		Database Module           &
+		\begin{itemize}
+			\item Store chat logs
+			      \begin{itemize}
+				      \item Stores all chat logs in a secure database
+			      \end{itemize}
+		\end{itemize}                                   \\
+		\hline
+	\end{tabular}
+
+	\includegraphics[scale = 0.8]{3A04_D1.png}
+\end{center}
 % End SubSection
 
 \subsection{User Characteristics}
@@ -655,7 +745,16 @@ The app will interface with Android APIs for biometric identification and geoloc
 \label{ssub:access_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-AC}1. ]
-	\item
+	\item User must be logged into the application to access any information.
+	      \\\textbf{Rationale:} This is to ensure that only users that have verified their credentials have access to any potentially sensitive information or features.
+	\item User must be a part of the company verified list.
+	      \\\textbf{Rationale:} For a user to join any chats or \textcolor{red}{announcement boards} they must be a verified member of the company that oversees the chats.
+	\item User must not have access to ant chats, \textcolor{red}{files or announcements} that they do not belong to.
+	      \\\textbf{Rationale:} To maintain the secure aspect of the application, only users that belong to certain chats, \textcolor{red}{files or announcements} may view them.
+	\item User must consent to have their location being used.
+	      \\\textbf{Rationale:} To ensure that the user is within a \textcolor{red}{verified geolocation}, the app needs permission to use their GPS location to determine if the location is verified.
+	\item User must consent to have their biometric data being used.
+	      \\\textbf{Rationale:} To utilize \textcolor{red}{biometric data for effective two-factor authentication}, the app needs permission to use the biometric data to determine if the user is who they say they are.
 \end{enumerate}
 % End SubSubSection
 
@@ -663,7 +762,13 @@ The app will interface with Android APIs for biometric identification and geoloc
 \label{ssub:integrity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-INT}1. ]
-	\item
+	\item The system will use an industry accepted end-to-end symmetric-key cryptosystem algorithm.
+	      \\\textbf{Rationale:} To ensure that the messages being sent back and forth are not being modified in the middle, an end-to-end encryption is necessary. The algorithm to be used will be one of the industry standard algorithms (AES, 3-DES) [8].
+	\item Chat logs will be stored separately from the rest of the system.
+	      \\\textbf{Rationale:} To ensure that the chat logs are not tampered with, they will be stored on a database that is separate from the system that only admins have access to.
+	\item Users should not change their name unless company allows it.
+	      \\\textbf{Rationale:} To verify that users know who they are chatting to, users should not be allowed to change their name unless given permission by the company.
+
 \end{enumerate}
 % End SubSubSection
 
@@ -671,7 +776,13 @@ The app will interface with Android APIs for biometric identification and geoloc
 \label{ssub:privacy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-P}1. ]
-	\item
+	\item The application will adhere to the Google Play Developer Distribution Agreement.
+	      \\\textbf{Rationale:} As this app is going to be developed for android, adhering to the GPDDA is a step to ensure that privacy is being kept [9].
+	\item Personal information of users should not be displayed to anyone outside of themselves.
+	      \\\textbf{Rationale:} To keep information such as age, gender, an employees department, etc. private, this information should not be displayed to those they are chatting to.
+	\item Notifications should not display message content.
+	      \\\textbf{Rationale:} To maintain the purpose of secure communication, notifications should not contain sensitive information, and rather have a message similar to “you have a notification from VanklComm, you have 8 unread messages”.
+
 \end{enumerate}
 % End SubSubSection
 
@@ -679,7 +790,8 @@ The app will interface with Android APIs for biometric identification and geoloc
 \label{ssub:audit_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-AU}1. ]
-	\item
+	\item The app must comply with company guidelines for auditing employee chats.
+	      \\\textbf{Rationale:} To allow for the company to regulate the chats that their employee’s send, the app must provide a way for them to audit effectively.
 \end{enumerate}
 % End SubSubSection
 
@@ -687,7 +799,8 @@ The app will interface with Android APIs for biometric identification and geoloc
 \label{ssub:immunity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR-IM}1. ]
-	\item
+	\item Verify with the KDC that the user is authorized.
+	      \\\textbf{Rationale:} To protect against malware or bad actors, only users authorized by the KDC may use the app.
 \end{enumerate}
 % End SubSubSection
 
@@ -701,7 +814,13 @@ The app will interface with Android APIs for biometric identification and geoloc
 \label{ssub:cultural_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP-C}1. ]
-	\item
+	\item No offensive imagery will be used in the composition of the app.
+	      \\\textbf{Rationale:} To make the app a safe space for all users, any imagery that is known to be offensive to any group of people must be erased from the app.
+	\item The app will not send messages that contain inappropriate words.
+	      \\\textbf{Rationale:} Using Google’s Word list [10] the use of inappropriate words will not be tolerated.
+	\item Users can report hateful and/or abusive language to the admin.
+	      \\\textbf{Rationale:} In order to maintain the safety of users, any inappropriate messages not caught by the word list can be reported by a user.
+
 \end{enumerate}
 % End SubSubSection
 
@@ -709,7 +828,10 @@ The app will interface with Android APIs for biometric identification and geoloc
 \label{ssub:political_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP-P}1. ]
-	\item
+	\item Users may only send direct messages to those who they are authorized to message.
+	      \\\textbf{Rationale:} A low level factory worker should not be messaging the CEO unless they have permission granted to do so.
+	\item Employees may send a message request to those they are unauthorized to message.
+	      \\\textbf{Rationale:} Similar to Facebook Messenger, if an employee is unauthorized, their message should go to a separate inbox that does not flood the receiver, but they can check to see the request.
 \end{enumerate}
 % End SubSubSection
 
@@ -723,7 +845,8 @@ The app will interface with Android APIs for biometric identification and geoloc
 \label{ssub:compliance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LR-COMP}1. ]
-	\item
+	\item The app will be SMS compliant [11].
+	      \\\textbf{Rationale:} To follow the law, the app must be SMS compliant as it is technically a text messaging service.
 \end{enumerate}
 % End SubSubSection
 
@@ -731,7 +854,8 @@ The app will interface with Android APIs for biometric identification and geoloc
 \label{ssub:standards_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LR-STD}1. ]
-	\item
+	\item The app will comply with the Android App Quality Standards [12].
+	      \\\textbf{Rationale:} To maintain good standards, the app will follow the standards given by Android.
 \end{enumerate}
 % End SubSubSection
 
