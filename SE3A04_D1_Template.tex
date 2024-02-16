@@ -112,12 +112,15 @@ This Software Requirement Specification has been created to specify the requirem
 	Available: https://consumer.ftc.gov/articles/use-two-factor-authentication-protect-your-accounts\#:\~:text=Using\%20two\%2Dfactor\%20authentication\%20is
 	\item[[7]] “99.999\% Uptime: Ensuring 5 Nines Uptime - Stratus Technologies,” Stratus | Zero-touch Edge Computing. Available: https://www.stratus.com/about/company-information/uptime-meter/
 	\\\#:\~:text=Availability\%20is\%20normally\%20expressed\%20in
-	\item[[8]] L. Shinder and M. Cross, “Understanding Cybercrime Prevention,” Scene of the Cybercrime, pp. 505–554, 2008, doi: 10.1016/B978-1-59749-276-8.00012-1.
-	\item[[9]] “Google Play.” Accessed: Feb. 11, 2024. Online.
+	\item[[8]] “Solid principles,” Engati, https://www.engati.com/glossary/solid-principles\#:~:text=Additionally\%2C\%20SOLID\%20principles\%20enable\%20engineers,\%2C\%20effective\%2C\%20and\%20agile\%20software.
+	\item[[9]] G. Singh, “Understanding the different mobile App Store guidelines,” Taazaa, https://www.taazaa.com/mobile-app-store-rules/\#:~:text=While\%20not\%20strictly\%20enforced\%2C\%20apps,on\%20how\%20apps\%20can\%20monetize.
+	\item[[10]] Optimal, “Why Identity Access Management (IAM) is so important?,” Optimal IdM, https://optimalidm.com/resources/blog/importance-of-iam/\#:~:text=IAM\%20is\%20a\%20critical\%20cybersecurity,user\%20access\%20to\%20your\%20system.
+	\item[[11]] L. Shinder and M. Cross, “Understanding Cybercrime Prevention,” Scene of the Cybercrime, pp. 505–554, 2008, doi: 10.1016/B978-1-59749-276-8.00012-1.
+	\item[[12]] “Google Play.” Accessed: Feb. 11, 2024. Online.
 	Available: https://play.google.com/about/developer-distribution-agreement.html
-	\item[[10]] “Word list  |  Google developer documentation style guide  |  Google for Developers.” Accessed: Feb. 11, 2024. Online. Available: https://developers.google.com/style/word-list
-	\item[[11]] “SMS Compliance: A Comprehensive Look | Text-Em-All.” Accessed: Feb. 11, 2024. Online. Available: https://www.text-em-all.com/sms-compliance
-	\item[[12]] “Android App Quality Standards According to Google | by Badr Kouki | The Startup | Medium.” Accessed: Feb. 11, 2024. Online. Available: https://medium.com/swlh/android-app-quality-standards-according-to-google-5144137735b7
+	\item[[13]] “Word list  |  Google developer documentation style guide  |  Google for Developers.” Accessed: Feb. 11, 2024. Online. Available: https://developers.google.com/style/word-list
+	\item[[14]] “SMS Compliance: A Comprehensive Look | Text-Em-All.” Accessed: Feb. 11, 2024. Online. Available: https://www.text-em-all.com/sms-compliance
+	\item[[15]] “Android App Quality Standards According to Google | by Badr Kouki | The Startup | Medium.” Accessed: Feb. 11, 2024. Online. Available: https://medium.com/swlh/android-app-quality-standards-according-to-google-5144137735b7
 
 \end{itemize}
 % End SubSection
@@ -283,22 +286,39 @@ Employee
 \subsection{Constraints}
 \label{sub:constraints}
 % Begin SubSection
-\begin{itemize}
-	\item Provide a general description of any constraints that will limit the developer's options
-\end{itemize}
+\subsection*{1. Platform Limitations:}
+The application must be developed specifically for the Android platform, limiting the use of platform-specific features and functionalities available on other mobile operating systems.
+
+\subsection*{2. Resource Constraints:}
+Developers must consider the limited computational resources (CPU, memory) and battery life of mobile devices, optimizing the application for efficiency and performance.
+
+\subsection*{3. Security Compliance:}
+The application must adhere to strict security standards and guidelines mandated by the organization and regulatory authorities, constraining certain design and implementation choices to ensure data confidentiality and integrity.
+
+\subsection*{4. Compatibility Requirements:}
+The application must be compatible with a wide range of Android devices and operating system versions, constraining the use of certain APIs or features that may not be universally supported across devices.
+
+\subsection*{5. Budgetary Limitations:}
+Development efforts must be mindful of budget constraints and resource allocations, potentially impacting the selection of development tools, technologies, and outsourcing decisions.
+
+\subsection*{6. Legal and Regulatory Constraints:}
+Developers must comply with legal and regulatory requirements governing data privacy, security, and intellectual property rights, influencing architectural decisions and feature implementations.
 % End SubSection
 
 \subsection{Assumptions and Dependencies}
 \label{sub:assumptions_and_dependencies}
 % Begin SubSection
+Assumptions in Interpreting Software Goals
 \begin{itemize}
-	\item List any assumptions you made in interpreting what the software being developed is aiming to achieve
-	\item List any other assumptions you made that, if it fails to hold, could require you to change the requirements
-	      %\item List each of the factors that affect the requirements stated in the SRS
-	      %\item These factors are not design constraints on the software but are, rather, any changes to them that can affect the requirements in the SRS
-	      \begin{itemize}
-		      \item \textbf{Example}: An assumption may be that a specific operating system will be available on the hardware designated for the software product. If, in fact, the operating system is not available, the SRS would then have to change accordingly.
-	      \end{itemize}
+	\item The primary goal of the software being developed is to provide a secure communication channel for employees of the organization, facilitating the exchange of sensitive information while mitigating the risk of corporate espionage.
+	\item The secure chat application will be deployed exclusively on Android devices issued by the organization, ensuring uniformity in device specifications and configurations.
+\end{itemize}
+Other Assumptions with Potential Requirement Implications
+\begin{itemize}
+	\item -	Users of the application are proficient in reading and understanding written communication, which forms the basis for providing documentation and user support materials in textual formats.
+	\item -	Users possess basic proficiency in using a mobile phone and navigating through mobile applications, influencing the design of the user interface to maintain familiarity and ease of use.
+	\item -	Availability and reliability of network connectivity are made, with the requirement specifications accommodating intermittent network disruptions or variations in network speed.
+	\item -	Organization will provide adequate resources and support for the maintenance and ongoing development of the secure chat application, influencing decisions regarding the scalability and extensibility of the software architecture.
 \end{itemize}
 % End SubSection
 
@@ -1157,7 +1177,16 @@ The app’s initial version only considers communication in terms of text-based 
 \label{ssub:appearance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LF-A}1. ]
-	\item
+	\item The application should maintain a consistent visual design across all screens and components. \newline
+	      \textbf{Rationale:} Consistency enhances user familiarity and navigational efficiency, reducing cognitive load and improving overall user experience.
+	\item The application interface should be accessible to users with diverse abilities and disabilities. \newline
+	      \textbf{Rationale:} Ensuring accessibility promotes inclusivity and usability for all users, regardless of their physical or cognitive abilities.
+	\item The application shall use colors that align with the company’s branding. \newline
+	      \textbf{Rationale:} The use of colors consistent with the organization's brand identity fosters brand recognition and trust among users. Consistency in color scheme reinforces the app's association with the organization, establishing it as an official and trustworthy platform for secure communication.
+	\item The application must use one consistent font choice throughout the app. \newline
+	      \textbf{Rationale:} Consistency in font choice enhances readability and maintains a professional appearance during secure communication sessions. By employing a uniform font across the app, users can easily process textual information and navigate content without distraction or inconsistency, promoting efficient and effective communication.
+	\item The application shall use a minimalist design. \newline
+	      \textbf{Rationale:} A minimalist design promotes simplicity, clarity, and ease of use, enhancing the user experience during secure communication sessions. By prioritizing essential elements and eliminating unnecessary clutter, the app's interface becomes more intuitive and conducive to maintaining confidentiality and security.
 \end{enumerate}
 % End SubSubSection
 
@@ -1165,7 +1194,10 @@ The app’s initial version only considers communication in terms of text-based 
 \label{ssub:style_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LF-S}1. ]
-	\item
+	\item The application should have a modern and professional visual style, reflecting the organization's brand identity. \newline
+	      \textbf{Rationale:} A modern and professional appearance instills confidence in users and reinforces the organization's commitment to quality and professionalism.
+	\item The system's visual elements and graphics shall evoke a sense of calmness and invitation. \newline
+	      \textbf{Rationale:} Creating a tranquil visual atmosphere instills a sense of relaxation and comfort in users, fostering a positive emotional response. By employing soft colors, gentle transitions, and inviting imagery, the app cultivates a welcoming environment that encourages users to engage with the platform.
 \end{enumerate}
 % End SubSubSection
 
@@ -1352,7 +1384,7 @@ The app’s initial version only considers communication in terms of text-based 
 \label{ssub:expected_physical_environment}
 % Begin SubSubSection
 \begin{enumerate}[{OE-EPE}1. ]
-	\item
+	\item N/A
 \end{enumerate}
 % End SubSubSection
 
@@ -1360,7 +1392,10 @@ The app’s initial version only considers communication in terms of text-based 
 \label{ssub:requirements_for_interfacing_with_adjacent_systems}
 % Begin SubSubSection
 \begin{enumerate}[{OE-IA}1. ]
-	\item
+	\item The application should integrate seamlessly with existing corporate authentication systems for user management and access control. \newline
+	      \textbf{Rationale:} Integrating with Identity and Access Management (IAM) systems centralizes user authentication and authorization, bolstering cybersecurity measures. This ensures consistent access control policies across organizational systems, minimizing security risks and enhancing regulatory compliance. Additionally, seamless IAM integration streamlines user management processes, improving operational efficiency and reducing administrative overhead. [8]
+	\item The application should function reliably across different network environments, including Wi-Fi, mobile data, and VPN connections. \newline
+	      \textbf{Rationale:} Employees may use the application in various physical locations with different network infrastructures. Ensuring compatibility with diverse network environments enhances usability and accessibility.
 \end{enumerate}
 % End SubSubSection
 
@@ -1368,7 +1403,8 @@ The app’s initial version only considers communication in terms of text-based 
 \label{ssub:productization_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE-P}1. ]
-	\item
+	\item The application should meet the guidelines and requirements set by the respective app stores (e.g., Google Play Store) for publication and distribution. \newline
+	      \textbf{Rationale:} Compliance with Android app store guidelines, such as those from the Google Play Store, ensures successful publication and wider distribution of the application. These guidelines cover privacy, security, functionality, and content policies. Adhering to these guidelines boosts user trust and visibility in the app store, maximizing reach and adoption among Android users. Failure to comply risks rejection or removal from the store, limiting accessibility and visibility. Hence, strict adherence to guidelines is vital for app success. [9]
 \end{enumerate}
 % End SubSubSection
 
@@ -1376,7 +1412,8 @@ The app’s initial version only considers communication in terms of text-based 
 \label{ssub:release_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE-R}1. ]
-	\item
+	\item The application should support backward compatibility with older versions of Android devices and allow seamless upgrades to newer versions. \newline
+	      \textbf{Rationale:} Ensuring version compatibility and upgradability minimizes fragmentation issues and ensures a consistent user experience across different device types and Android OS versions.
 \end{enumerate}
 % End SubSubSection
 
@@ -1390,7 +1427,12 @@ The app’s initial version only considers communication in terms of text-based 
 \label{ssub:maintenance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS-M}1. ]
-	\item
+	\item The codebase should be thoroughly documented, with clear comments explaining the purpose and functionality of each module and component. \newline
+	      \textbf{Rationale:} Comprehensive documentation facilitates efficient troubleshooting, debugging, and future enhancements, reducing the time and effort required for maintenance tasks.
+	\item The application's codebase must adhere to SOLID principles of software design: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion. \newline
+	      \textbf{Rationale:} Adherence to SOLID principles promotes maintainability, extensibility, and reusability of the codebase. By following these principles, the application's code becomes modular, easier to understand, and less prone to bugs. This facilitates efficient maintenance and future enhancements, reducing the risk of introducing unintended side effects during code modifications.
+	\item Detailed patch notes must accompany each application update, outlining changes, bug fixes, and feature enhancements. \newline
+	      \textbf{Rationale:} Providing comprehensive patch notes enhances transparency and communication with users, keeping them informed about changes to the application. Clear documentation of updates enables users to understand the purpose and impact of each release, promoting user trust and satisfaction. Additionally, detailed patch notes aid in troubleshooting and support, allowing users to identify and report any issues accurately.[10]
 \end{enumerate}
 % End SubSubSection
 
@@ -1398,7 +1440,8 @@ The app’s initial version only considers communication in terms of text-based 
 \label{ssub:supportability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS-S}1. ]
-	\item
+	\item Provide comprehensive user support resources, including user manuals, FAQs, and online tutorials, to assist users in navigating and utilizing the application effectively. \newline
+	      \textbf{Rationale:} Accessible support materials empower users to resolve issues independently and minimize the need for direct assistance, thus reducing support overhead and improving user satisfaction.
 \end{enumerate}
 % End SubSubSection
 
@@ -1406,7 +1449,8 @@ The app’s initial version only considers communication in terms of text-based 
 \label{ssub:adaptability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS-A}1. ]
-	\item
+	\item . The application must be adaptable to future releases of the Android operating system and new physical devices. \newline
+	      \textbf{Rationale:} Adapting to evolving Android software and hardware ensures uninterrupted functionality, leveraging new features, optimizations, and security enhancements. This maintains competitiveness and relevance, future-proofing the application for continued usability across diverse devices and Android versions.
 \end{enumerate}
 % End SubSubSection
 
@@ -1580,6 +1624,21 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 	\centering
 	\includegraphics[width=0.5\textwidth]{LeoSignature.jpg}
 	\label{fig:signature}
+\end{figure}
+
+\subsection*{Alex Yoon:}
+\begin{itemize}
+    \item Section 2.4 - Constraints 
+    \item Section 2.5 - Assumptions and Dependencies
+    \item Section 5.1 - Look and Feel Requirements
+    \item Section 5.4 - Operational and Environmental Requirements
+    \item Section 5.5 - Maintainability and Support Requirements
+    \item Reviewed the whole document as a group
+\end{itemize}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{AlexSignature.png}
+    \label{fig:signature}
 \end{figure}
 
 
