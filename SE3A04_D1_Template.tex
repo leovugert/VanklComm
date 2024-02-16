@@ -132,6 +132,12 @@ Section 2 provides an overview of the product’s description in terms of the ge
 \section{Overall Product Description}
 \label{sec:overall_description}
 % Begin Section
+\begin{itemize}
+	\item This section should describe the general factors that affect the product and its requirements.
+	\item It does not state specific requirements.
+	\item It provides a \emph{background} for those requirements and makes them easier to understand.
+\end{itemize}
+
 
 \subsection{Product Perspective}
 \label{sub:product_perspective}
@@ -357,7 +363,7 @@ The app’s initial version only considers communication in terms of text-based 
 	\item BE8 Key Updates
 	\item[\textcolor{red}{\textbullet}] \textcolor{red}{BE9 Biometric Authentication}
 	\item[\textcolor{red}{\textbullet}] \textcolor{red}{BE10 Geolocation}
-
+	
 \end{itemize}
 
 \noindent {\bf Viewpoints:} List out all the viewpoints you will be considering.\\
@@ -369,8 +375,8 @@ The app’s initial version only considers communication in terms of text-based 
 	\item 	VP4 Security Auditors/Cybersecurity
 	\item 	VP5 Legal Department
 	\item 	VP6 Board of Directors
-
-
+	
+	
 \end{itemize}
 
 \noindent {\bf Interpretation:} Specify any liberties you took in interpreting business events, if necessary.\\
@@ -381,61 +387,61 @@ The app’s initial version only considers communication in terms of text-based 
 \subsubsection*{1VP. User \#1}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item The user logs into the VANKL secure chat application.
-	\item The system authenticates the user.
-	\item Once authenticated, the user may engage in various tasks, including secure communication, accessing the chat’s history log, utilizing the contact book, sharing files securely, and receiving broadcasts from higher authority.
+    \item The user logs into the VANKL secure chat application.
+    \item The system authenticates the user.
+    \item Once authenticated, the user may engage in various tasks, including secure communication, accessing the chat’s history log, utilizing the contact book, sharing files securely, and receiving broadcasts from higher authority.
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate the user.
-		\begin{enumerate}
-			\item[\textbf{2i.1}] The system will prompt the user to retry for authentication.
-			\item[\textbf{2i.2}] If the issue persists, then the user will be redirected to contact tech support.
-		\end{enumerate}
-	\item[\textbf{3i.}] The user experiences delays when trying to access the chat’s history log, due to server overload issues.
-		\begin{enumerate}
-			\item[\textbf{3i.1}] The system provides a display message to inform the user of this delay and apologizes for the inconvenience.
-			\item[\textbf{3i.2}] The system will continuously attempt to alleviate the increased demand, by utilizing backup servers, caching, and load balancing.
-		\end{enumerate}
+    \item[\textbf{2i.}] The system fails to authenticate the user.
+    \begin{enumerate}
+        \item[\textbf{2i.1}] The system will prompt the user to retry for authentication.
+        \item[\textbf{2i.2}] If the issue persists, then the user will be redirected to contact tech support.
+    \end{enumerate}
+    \item[\textbf{3i.}] The user experiences delays when trying to access the chat’s history log, due to server overload issues.
+    \begin{enumerate}
+        \item[\textbf{3i.1}] The system provides a display message to inform the user of this delay and apologizes for the inconvenience.
+        \item[\textbf{3i.2}] The system will continuously attempt to alleviate the increased demand, by utilizing backup servers, caching, and load balancing.
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{2VP. Tech Support/IT \#2}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate Tech Support/IT.
-	\item[\textbf{3i.}] Tech Support/IT faces challenges during debugging and troubleshooting, due to an unexpected server outage.
+    \item[\textbf{2i.}] The system fails to authenticate Tech Support/IT.
+    \item[\textbf{3i.}] Tech Support/IT faces challenges during debugging and troubleshooting, due to an unexpected server outage.
 \end{enumerate}
 \subsubsection*{3VP. KDC Administrator \#3}
 \textbf{N/A}
 \subsubsection*{4VP. Security Auditors/Cybersecurity \#4}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate the Security Auditors/Cybersecurity.
-	\item[\textbf{3i.}] The Security Auditors/Cybersecurity encounter issues while accessing specific logs, due to a temporary system glitch.
+    \item[\textbf{2i.}] The system fails to authenticate the Security Auditors/Cybersecurity.
+    \item[\textbf{3i.}] The Security Auditors/Cybersecurity encounter issues while accessing specific logs, due to a temporary system glitch.
 \end{enumerate}
 \subsubsection*{5VP. Legal Department \#5}
 \textbf{N/A}
 \subsubsection*{6VP. Board of Directors \#6}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate the Board of Directors.
-	\item[\textbf{3i.}] The Board of Directors encounter delays while sending a one-way message in the broadcasting channel, due to server overload.
+    \item[\textbf{2i.}] The system fails to authenticate the Board of Directors.
+    \item[\textbf{3i.}] The Board of Directors encounter delays while sending a one-way message in the broadcasting channel, due to server overload.
 \end{enumerate}
 \textbf{Global Scenario:}
 \subsubsection*{Precondition:} The secure chat application has already been installed on an Android device, the user has an account, and all necessary configurations have been made.\newline\newline
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item The user, Tech Support/IT, Security Auditors/Cybersecurity, Legal Department, and the Board of Directors all log into the VANKL secure chat application (not necessarily simultaneously).
-	\item The system authenticates each entity successfully.
-	\item Each entity performs their respective tasks and actions within the application.
+    \item The user, Tech Support/IT, Security Auditors/Cybersecurity, Legal Department, and the Board of Directors all log into the VANKL secure chat application (not necessarily simultaneously).
+    \item The system authenticates each entity successfully.
+    \item Each entity performs their respective tasks and actions within the application.
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate any entity.
-		\begin{enumerate}
-			\item[\textbf{2i.1}] The system will prompt that entity to retry for authentication.
-			\item[\textbf{2i.2}] If the issue persists, then that entity will be redirected to contact their respective support department (not necessarily Tech Support/IT).
-		\end{enumerate}
-	\item[\textbf{3i.}] An entity faces issues related to the various functionalities of the application, due to server problems.
-		\begin{enumerate}
-			\item[\textbf{3i.1}] The system provides a global display message to acknowledge the issue(s), and assures the entity(s) that Tech Support/IT is working on a resolution.
-		\end{enumerate}
+    \item[\textbf{2i.}] The system fails to authenticate any entity.
+    \begin{enumerate}
+        \item[\textbf{2i.1}] The system will prompt that entity to retry for authentication.
+        \item[\textbf{2i.2}] If the issue persists, then that entity will be redirected to contact their respective support department (not necessarily Tech Support/IT).
+    \end{enumerate}
+    \item[\textbf{3i.}] An entity faces issues related to the various functionalities of the application, due to server problems.
+    \begin{enumerate}
+        \item[\textbf{3i.1}] The system provides a global display message to acknowledge the issue(s), and assures the entity(s) that Tech Support/IT is working on a resolution.
+    \end{enumerate}
 \end{enumerate}
 
 \section*{2BE. Chat History Log \#2}
@@ -443,28 +449,28 @@ The app’s initial version only considers communication in terms of text-based 
 \subsubsection*{1VP. User \#1}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item The user logs into the VANKL secure chat application.
-	\item The system authenticates the user.
-	\item Once authenticated, the user can access their chat’s history log.
-	\item The system displays specific identifiers, date, time, and an up-to-date chat transcript for each conversation.
+    \item The user logs into the VANKL secure chat application.
+    \item The system authenticates the user.
+    \item Once authenticated, the user can access their chat’s history log.
+    \item The system displays specific identifiers, date, time, and an up-to-date chat transcript for each conversation.
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate the user.
-		\begin{enumerate}
-			\item[\textbf{2i.1}] The system will prompt the user to retry for authentication.
-			\item[\textbf{2i.2}] If the issue persists, then the user will be redirected to contact tech support.
-		\end{enumerate}
-	\item[\textbf{3i.}] The user experiences delays when trying to access the chat’s history log, due to server overload issues.
-		\begin{enumerate}
-			\item[\textbf{3i.1}] The system provides a display message to inform the user of this delay and apologizes for the inconvenience.
-			\item[\textbf{3i.2}] The system will continuously attempt to alleviate the increased demand, by utilizing backup servers, caching, and load balancing.
-		\end{enumerate}
-	\item[\textbf{4i.}] While viewing a specific conversation, the system experiences a temporary glitch, which results in missing or incomplete messages.
-		\begin{enumerate}
-			\item[\textbf{4i.1}] The system provides a display message to inform the user of this issue, and apologizes for the inconvenience.
-			\item[\textbf{4i.2}] The system then advises the user to refresh the chat log or contact Tech Support/IT, if the problem still persists.
-		\end{enumerate}
+    \item[\textbf{2i.}] The system fails to authenticate the user.
+    \begin{enumerate}
+        \item[\textbf{2i.1}] The system will prompt the user to retry for authentication.
+        \item[\textbf{2i.2}] If the issue persists, then the user will be redirected to contact tech support.
+    \end{enumerate}
+    \item[\textbf{3i.}] The user experiences delays when trying to access the chat’s history log, due to server overload issues.
+    \begin{enumerate}
+        \item[\textbf{3i.1}] The system provides a display message to inform the user of this delay and apologizes for the inconvenience.
+        \item[\textbf{3i.2}] The system will continuously attempt to alleviate the increased demand, by utilizing backup servers, caching, and load balancing.
+    \end{enumerate}
+    \item[\textbf{4i.}] While viewing a specific conversation, the system experiences a temporary glitch, which results in missing or incomplete messages.
+    \begin{enumerate}
+        \item[\textbf{4i.1}] The system provides a display message to inform the user of this issue, and apologizes for the inconvenience.
+        \item[\textbf{4i.2}] The system then advises the user to refresh the chat log or contact Tech Support/IT, if the problem still persists.
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{2VP. Tech Support/IT \#2}
 \textbf{N/A}
@@ -480,25 +486,25 @@ The app’s initial version only considers communication in terms of text-based 
 \subsubsection*{Precondition:} The secure chat application has already been installed on an Android device, the user has an account, and all necessary configurations have been made.\newline\newline
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item The user, Tech Support/IT, Security Auditors/Cybersecurity, Legal Department, and the Board of Directors all log into the VANKL secure chat application (not necessarily simultaneously).
-	\item The system authenticates each entity successfully.
-	\item Each entity accesses their respective chat history log that has accurate and up-to-date conversation records.
+    \item The user, Tech Support/IT, Security Auditors/Cybersecurity, Legal Department, and the Board of Directors all log into the VANKL secure chat application (not necessarily simultaneously).
+    \item The system authenticates each entity successfully.
+    \item Each entity accesses their respective chat history log that has accurate and up-to-date conversation records.
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate any entity.
-		\begin{enumerate}
-			\item[\textbf{2i.1}] The system will prompt that entity to retry for authentication.
-			\item[\textbf{2i.2}] If the issue persists, then that entity will be redirected to contact their respective support department (not necessarily Tech Support/IT).
-		\end{enumerate}
-	\item[\textbf{3i.}] An entity faces delays in accessing specific chat history logs, due to server problems.
-		\begin{enumerate}
-			\item[\textbf{3i.1}] The system provides a global display message to acknowledge the issue(s), and assures the entity(s) that Tech Support/IT is working on a resolution.
-		\end{enumerate}
-	\item[\textbf{4i.}] An entity faces system glitches, resulting in missing or incomplete messages while viewing conversations.
-		\begin{enumerate}
-			\item[\textbf{4i.1}] The system provides an error message and advises the entity(s) to report this issue to management (Board of Directors), who will in turn contact Tech Support/IT for investigating this issue.
-		\end{enumerate}
+    \item[\textbf{2i.}] The system fails to authenticate any entity.
+    \begin{enumerate}
+        \item[\textbf{2i.1}] The system will prompt that entity to retry for authentication.
+        \item[\textbf{2i.2}] If the issue persists, then that entity will be redirected to contact their respective support department (not necessarily Tech Support/IT).
+    \end{enumerate}
+    \item[\textbf{3i.}] An entity faces delays in accessing specific chat history logs, due to server problems.
+    \begin{enumerate}
+        \item[\textbf{3i.1}] The system provides a global display message to acknowledge the issue(s), and assures the entity(s) that Tech Support/IT is working on a resolution.
+    \end{enumerate}
+    \item[\textbf{4i.}] An entity faces system glitches, resulting in missing or incomplete messages while viewing conversations.
+    \begin{enumerate}
+        \item[\textbf{4i.1}] The system provides an error message and advises the entity(s) to report this issue to management (Board of Directors), who will in turn contact Tech Support/IT for investigating this issue.
+    \end{enumerate}
 \end{enumerate}
 
 
@@ -507,34 +513,34 @@ The app’s initial version only considers communication in terms of text-based 
 \subsubsection*{1VP. User \#1}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item The user logs into the VANKL secure chat application.
-	\item The system authenticates the user.
-	\item Once authenticated, the user can access their contact book.
-	\item The system provides saved agents’ contact information for easier communication access.
-	\item The user can easily add, edit, and/or delete contacts as required.
+    \item The user logs into the VANKL secure chat application.
+    \item The system authenticates the user.
+    \item Once authenticated, the user can access their contact book.
+    \item The system provides saved agents’ contact information for easier communication access.
+    \item The user can easily add, edit, and/or delete contacts as required.
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate the user.
-		\begin{enumerate}
-			\item[\textbf{2i.1}] The system will prompt the user to retry for authentication.
-			\item[\textbf{2i.2}] If the issue persists, then the user will be redirected to contact tech support.
-		\end{enumerate}
-	\item[\textbf{3i.}] The user experiences delays when trying to access their contact book, due to server overload issues.
-		\begin{enumerate}
-			\item[\textbf{3i.1}] The system provides a display message to inform the user of this delay, and apologizes for the inconvenience.
-			\item[\textbf{3i.2}] The system will continuously attempt to alleviate the increased demand, by utilizing backup servers, caching, and load balancing.
-		\end{enumerate}
-	\item[\textbf{4i.}] When searching for an employee’s contact, the system experiences a temporary glitch, which leads to missing contact information.
-		\begin{enumerate}
-			\item[\textbf{4i.1}] The system provides a display message to inform the user of this error, and apologizes for the inconvenience.
-			\item[\textbf{4i.2}] The system advises the user to refresh the contact book or contact Tech Support/IT, if the issue still persists.
-		\end{enumerate}
-	\item[\textbf{5i.}] When accessing the contact book to add, edit, and/or delete contacts, the system faces a navigation malfunction.
-		\begin{enumerate}
-			\item[\textbf{5i.1}] When the user attempts to access the contact book feature, the system runs into a malfunction with the navigation subsystem.
-			\item[\textbf{5i.2}] The system provides an error message to the user apologizing for the inconvenience and logs an incident report for the tech team to assess and resolve.
-		\end{enumerate}
+    \item[\textbf{2i.}] The system fails to authenticate the user.
+    \begin{enumerate}
+        \item[\textbf{2i.1}] The system will prompt the user to retry for authentication.
+        \item[\textbf{2i.2}] If the issue persists, then the user will be redirected to contact tech support.
+    \end{enumerate}
+    \item[\textbf{3i.}] The user experiences delays when trying to access their contact book, due to server overload issues.
+    \begin{enumerate}
+        \item[\textbf{3i.1}] The system provides a display message to inform the user of this delay, and apologizes for the inconvenience.
+        \item[\textbf{3i.2}] The system will continuously attempt to alleviate the increased demand, by utilizing backup servers, caching, and load balancing.
+    \end{enumerate}
+    \item[\textbf{4i.}] When searching for an employee’s contact, the system experiences a temporary glitch, which leads to missing contact information.
+    \begin{enumerate}
+        \item[\textbf{4i.1}] The system provides a display message to inform the user of this error, and apologizes for the inconvenience.
+        \item[\textbf{4i.2}] The system advises the user to refresh the contact book or contact Tech Support/IT, if the issue still persists.
+    \end{enumerate}
+    \item[\textbf{5i.}] When accessing the contact book to add, edit, and/or delete contacts, the system faces a navigation malfunction.
+    \begin{enumerate}
+        \item[\textbf{5i.1}] When the user attempts to access the contact book feature, the system runs into a malfunction with the navigation subsystem.
+        \item[\textbf{5i.2}] The system provides an error message to the user apologizing for the inconvenience and logs an incident report for the tech team to assess and resolve.
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{2VP. Tech Support/IT \#2}
 \textbf{N/A}
@@ -550,22 +556,22 @@ The app’s initial version only considers communication in terms of text-based 
 \subsubsection*{Precondition:} The secure chat application has already been installed on an Android device, the user has an account, and all necessary configurations have been made.\newline\newline
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item The user, Tech Support/IT, Security Auditors/Cybersecurity, Legal Department, and the Board of Directors all log into the VANKL secure chat application (not necessarily simultaneously).
-	\item The system authenticates each entity successfully.
-	\item Only the users can access the contact book and view their saved agents’ information for easier communication access.
+    \item The user, Tech Support/IT, Security Auditors/Cybersecurity, Legal Department, and the Board of Directors all log into the VANKL secure chat application (not necessarily simultaneously).
+    \item The system authenticates each entity successfully.
+    \item Only the users can access the contact book and view their saved agents’ information for easier communication access.
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate any entity.
-		\begin{enumerate}
-			\item[\textbf{2i.1}] The system will prompt that entity to retry for authentication.
-			\item[\textbf{2i.2}] If the issue persists, then that entity will be redirected to contact their respective support department (not necessarily Tech Support/IT).
-		\end{enumerate}
-	\item[\textbf{3i.}] A user faces issues when trying to open their contact book, such as accessing delays or missing/incomplete contact information.
-		\begin{enumerate}
-			\item[\textbf{3i.1}] The system provides a display message to acknowledge that Tech Support/IT is working on a resolution.
-			\item[\textbf{3i.2}] The system advises the user to refresh the contact book or access it at a later time.
-		\end{enumerate}
+    \item[\textbf{2i.}] The system fails to authenticate any entity.
+    \begin{enumerate}
+        \item[\textbf{2i.1}] The system will prompt that entity to retry for authentication.
+        \item[\textbf{2i.2}] If the issue persists, then that entity will be redirected to contact their respective support department (not necessarily Tech Support/IT).
+    \end{enumerate}
+    \item[\textbf{3i.}] A user faces issues when trying to open their contact book, such as accessing delays or missing/incomplete contact information.
+    \begin{enumerate}
+        \item[\textbf{3i.1}] The system provides a display message to acknowledge that Tech Support/IT is working on a resolution.
+        \item[\textbf{3i.2}] The system advises the user to refresh the contact book or access it at a later time.
+    \end{enumerate}
 \end{enumerate}
 
 \section*{4BE. Secure File Sharing \#4}
@@ -573,29 +579,29 @@ The app’s initial version only considers communication in terms of text-based 
 \subsubsection*{1VP. User \#1}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item The user logs into the VANKL secure chat application.
-	\item The system authenticates the user.
-	\item Once authenticated, the user can initiate secure file sharing.
-	\item The system will encrypt the file and facilitate secure transmission.
-	\item The file recipient will then decrypt and access the shared file.
+    \item The user logs into the VANKL secure chat application.
+    \item The system authenticates the user.
+    \item Once authenticated, the user can initiate secure file sharing.
+    \item The system will encrypt the file and facilitate secure transmission.
+    \item The file recipient will then decrypt and access the shared file.
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate the user.
-		\begin{enumerate}
-			\item[\textbf{2i.1}] The system will prompt the user to retry for authentication.
-			\item[\textbf{2i.2}] If the issue persists, then the user will be redirected to contact tech support.
-		\end{enumerate}
-	\item[\textbf{3i.}] The user experiences delays when trying to initiate secure file transfer, due to server overload issues.
-		\begin{enumerate}
-			\item[\textbf{3i.1}] The system provides a display message to inform the user of this delay, and apologizes for the inconvenience.
-			\item[\textbf{3i.2}] The system will continuously attempt to alleviate the increased demand, by utilizing backup servers, caching, and load balancing.
-		\end{enumerate}
-	\item[\textbf{4i.}] When encrypting the file, the system experiences a temporary glitch, which leads to a delay in the transmission process.
-		\begin{enumerate}
-			\item[\textbf{4i.1}] The system provides a display message to inform the user of this error, and apologizes for the inconvenience.
-			\item[\textbf{4i.2}] The system advises the user to retry file sharing or contact Tech Support/IT, if the issue still persists.
-		\end{enumerate}
+    \item[\textbf{2i.}] The system fails to authenticate the user.
+    \begin{enumerate}
+        \item[\textbf{2i.1}] The system will prompt the user to retry for authentication.
+        \item[\textbf{2i.2}] If the issue persists, then the user will be redirected to contact tech support.
+    \end{enumerate}
+    \item[\textbf{3i.}] The user experiences delays when trying to initiate secure file transfer, due to server overload issues.
+    \begin{enumerate}
+        \item[\textbf{3i.1}] The system provides a display message to inform the user of this delay, and apologizes for the inconvenience.
+        \item[\textbf{3i.2}] The system will continuously attempt to alleviate the increased demand, by utilizing backup servers, caching, and load balancing.
+    \end{enumerate}
+    \item[\textbf{4i.}] When encrypting the file, the system experiences a temporary glitch, which leads to a delay in the transmission process.
+    \begin{enumerate}
+        \item[\textbf{4i.1}] The system provides a display message to inform the user of this error, and apologizes for the inconvenience.
+        \item[\textbf{4i.2}] The system advises the user to retry file sharing or contact Tech Support/IT, if the issue still persists.
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{2VP. Tech Support/IT \#2}
 \textbf{N/A}
@@ -611,27 +617,27 @@ The app’s initial version only considers communication in terms of text-based 
 \subsubsection*{Precondition:} The secure chat application has already been installed on an Android device, the user has an account, and all necessary configurations have been made.\newline\newline
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item The user, Tech Support/IT, Security Auditors/Cybersecurity, Legal Department, and the Board of Directors all log into the VANKL secure chat application (not necessarily simultaneously).
-	\item The system authenticates each entity successfully.
-	\item Only the users can initiate secure file transfer between the employees of the company.
+    \item The user, Tech Support/IT, Security Auditors/Cybersecurity, Legal Department, and the Board of Directors all log into the VANKL secure chat application (not necessarily simultaneously).
+    \item The system authenticates each entity successfully.
+    \item Only the users can initiate secure file transfer between the employees of the company.
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate any entity.
-		\begin{enumerate}
-			\item[\textbf{2i.1}] The system will prompt that entity to retry for authentication.
-			\item[\textbf{2i.2}] If the issue persists, then that entity will be redirected to contact their respective support department (not necessarily Tech Support/IT).
-		\end{enumerate}
-	\item[\textbf{3i.}] A user faces delays in the secure file sharing process, due to server issues.
-		\begin{enumerate}
-			\item[\textbf{3i.1}] The system provides a display message to acknowledge that Tech Support/IT is working on a resolution.
-			\item[\textbf{3i.2}] The system advises the user to retry the file transfer or try again at a later time.
-		\end{enumerate}
-	\item[\textbf{4i.}] The system faces temporary glitches resulting in missing/incomplete file transfer.
-		\begin{enumerate}
-			\item[\textbf{4i.1}] The system provides a display message to acknowledge that Tech Support/IT is working on a resolution.
-			\item[\textbf{4i.2}] The system advises the user to retry the file transfer when the glitches have been fixed at a later date.
-		\end{enumerate}
+    \item[\textbf{2i.}] The system fails to authenticate any entity.
+    \begin{enumerate}
+        \item[\textbf{2i.1}] The system will prompt that entity to retry for authentication.
+        \item[\textbf{2i.2}] If the issue persists, then that entity will be redirected to contact their respective support department (not necessarily Tech Support/IT).
+    \end{enumerate}
+    \item[\textbf{3i.}] A user faces delays in the secure file sharing process, due to server issues.
+    \begin{enumerate}
+        \item[\textbf{3i.1}] The system provides a display message to acknowledge that Tech Support/IT is working on a resolution.
+        \item[\textbf{3i.2}] The system advises the user to retry the file transfer or try again at a later time.
+    \end{enumerate}
+    \item[\textbf{4i.}] The system faces temporary glitches resulting in missing/incomplete file transfer.
+    \begin{enumerate}
+        \item[\textbf{4i.1}] The system provides a display message to acknowledge that Tech Support/IT is working on a resolution.
+        \item[\textbf{4i.2}] The system advises the user to retry the file transfer when the glitches have been fixed at a later date.
+    \end{enumerate}
 \end{enumerate}
 
 \section*{\textcolor{red}{5BE. Broadcasting Channel \#5}}
@@ -639,28 +645,28 @@ The app’s initial version only considers communication in terms of text-based 
 \subsubsection*{1VP. User \#1}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item The user logs into the VANKL secure chat application.
-	\item The system authenticates the user.
-	\item Once authenticated, the user can access the one-way broadcasting channel feature.
-	\item The system allows users to view the broadcasted announcements sent out by their superiors (i.e. Board of Directors).
+    \item The user logs into the VANKL secure chat application.
+    \item The system authenticates the user.
+    \item Once authenticated, the user can access the one-way broadcasting channel feature.
+    \item The system allows users to view the broadcasted announcements sent out by their superiors (i.e. Board of Directors).
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate the user.
-		\begin{enumerate}
-			\item[\textbf{2i.1}] The system will prompt the user to retry for authentication.
-			\item[\textbf{2i.2}] If the issue persists, then the user will be redirected to contact tech support.
-		\end{enumerate}
-	\item[\textbf{3i.}] The user experiences delays when trying to access the broadcasting channel, due to server overload issues.
-		\begin{enumerate}
-			\item[\textbf{3i.1}] The system provides a display message to inform the user of this delay, and apologizes for the inconvenience.
-			\item[\textbf{3i.2}] The system will continuously attempt to alleviate the increased demand, by utilizing backup servers, caching, and load balancing.
-		\end{enumerate}
-	\item[\textbf{4i.}] The system experiences a temporary glitch, which leads to missing one-way messages in the broadcasting channel.
-		\begin{enumerate}
-			\item[\textbf{4i.1}] The system provides a display message to inform the user of this issue, and apologizes for the inconvenience.
-			\item[\textbf{4i.2}] The system advises the user to report this issue to Tech Support/IT.
-		\end{enumerate}
+    \item[\textbf{2i.}] The system fails to authenticate the user.
+    \begin{enumerate}
+        \item[\textbf{2i.1}] The system will prompt the user to retry for authentication.
+        \item[\textbf{2i.2}] If the issue persists, then the user will be redirected to contact tech support.
+    \end{enumerate}
+    \item[\textbf{3i.}] The user experiences delays when trying to access the broadcasting channel, due to server overload issues.
+    \begin{enumerate}
+        \item[\textbf{3i.1}] The system provides a display message to inform the user of this delay, and apologizes for the inconvenience.
+        \item[\textbf{3i.2}] The system will continuously attempt to alleviate the increased demand, by utilizing backup servers, caching, and load balancing.
+    \end{enumerate}
+    \item[\textbf{4i.}] The system experiences a temporary glitch, which leads to missing one-way messages in the broadcasting channel.
+    \begin{enumerate}
+        \item[\textbf{4i.1}] The system provides a display message to inform the user of this issue, and apologizes for the inconvenience.
+        \item[\textbf{4i.2}] The system advises the user to report this issue to Tech Support/IT.
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{2VP. Tech Support/IT \#2}
 \textbf{N/A}
@@ -672,39 +678,39 @@ The app’s initial version only considers communication in terms of text-based 
 \textbf{N/A}
 \subsubsection*{6VP. Board of Directors \#6}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate a Board of Directors member.
-	\item[\textbf{3i.}] The Board of Directors member experiences delays when trying to access the broadcasting channel, due to server overload issues.
-	\item[\textbf{4i.}] The system experiences a temporary glitch, which leads to missing one-way messages (that a member has sent) in the broadcasting channel.
+    \item[\textbf{2i.}] The system fails to authenticate a Board of Directors member.
+    \item[\textbf{3i.}] The Board of Directors member experiences delays when trying to access the broadcasting channel, due to server overload issues.
+    \item[\textbf{4i.}] The system experiences a temporary glitch, which leads to missing one-way messages (that a member has sent) in the broadcasting channel.
 \end{enumerate}
 \textbf{Global Scenario:}
 \subsubsection*{Precondition:} The secure chat application has already been installed on an Android device, the user has an account, and all necessary configurations have been made.\newline\newline
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item The user, Tech Support/IT, Security Auditors/Cybersecurity, Legal Department, and the Board of Directors all log into the VANKL secure chat application (not necessarily simultaneously).
-	\item The system authenticates each entity successfully.
-	\item Only the users and the Board of Directors can utilize the broadcasting channel feature, where users (i.e. employees) can view one-way messages and board members can send one-way messages.
+    \item The user, Tech Support/IT, Security Auditors/Cybersecurity, Legal Department, and the Board of Directors all log into the VANKL secure chat application (not necessarily simultaneously).
+    \item The system authenticates each entity successfully.
+    \item Only the users and the Board of Directors can utilize the broadcasting channel feature, where users (i.e. employees) can view one-way messages and board members can send one-way messages.
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] The system fails to authenticate any entity.
-		\begin{enumerate}
-			\item[\textbf{2i.1}] The system will prompt that entity to retry for authentication.
-			\item[\textbf{2i.2}] If the issue persists, then that entity will be redirected to contact their respective support department (not necessarily Tech Support/IT).
-		\end{enumerate}
-	\item[\textbf{3i.}] An entity faces delays in accessing the broadcasting channel, due to server issues.
-		\begin{enumerate}
-			\item[\textbf{3i.1}] The system provides a display message to acknowledge that Tech Support/IT is working on a resolution.
-			\item[\textbf{3i.2}] The system advises the entity(s) to refresh the broadcasting channel or try again at a later time.
-		\end{enumerate}
-	\item[\textbf{4i.}] The system faces temporary glitches resulting in missing/incomplete one-way messages in the broadcasting channel.
-		\begin{enumerate}
-			\item[\textbf{4i.1}] The system provides a display message to acknowledge that Tech Support/IT is working on a resolution.
-			\item[\textbf{4i.2}] The system advises the entity(s) to access the broadcasting channel when the glitches have been fixed at a later date.
-		\end{enumerate}
+    \item[\textbf{2i.}] The system fails to authenticate any entity.
+    \begin{enumerate}
+        \item[\textbf{2i.1}] The system will prompt that entity to retry for authentication.
+        \item[\textbf{2i.2}] If the issue persists, then that entity will be redirected to contact their respective support department (not necessarily Tech Support/IT).
+    \end{enumerate}
+    \item[\textbf{3i.}] An entity faces delays in accessing the broadcasting channel, due to server issues.
+    \begin{enumerate}
+        \item[\textbf{3i.1}] The system provides a display message to acknowledge that Tech Support/IT is working on a resolution.
+        \item[\textbf{3i.2}] The system advises the entity(s) to refresh the broadcasting channel or try again at a later time.
+    \end{enumerate}
+    \item[\textbf{4i.}] The system faces temporary glitches resulting in missing/incomplete one-way messages in the broadcasting channel.
+    \begin{enumerate}
+        \item[\textbf{4i.1}] The system provides a display message to acknowledge that Tech Support/IT is working on a resolution.
+        \item[\textbf{4i.2}] The system advises the entity(s) to access the broadcasting channel when the glitches have been fixed at a later date.
+    \end{enumerate}
 \end{enumerate}
 
 \section*{6BE. User Registration \#6}
-\subsubsection*{Precondition:}
+\subsubsection*{Precondition:} 
 \begin{itemize}
 	\item User does not have an account
 	\item User was granted access to company issued device/email
@@ -714,7 +720,7 @@ The app’s initial version only considers communication in terms of text-based 
 \subsubsection*{1VP. User \#1}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User gains access to make an account
+    \item User gains access to make an account
 	\item User initiates sign in
 	\item User inputs information
 	\item User is provided key from KDC
@@ -722,28 +728,28 @@ The app’s initial version only considers communication in terms of text-based 
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] User inputs incorrect information
-		\begin{enumerate}
-			\item[\textbf{2i.1}] User submits incorrect information
-			\item[\textbf{2i.2}] Prompts user to recheck information and resubmit
-		\end{enumerate}
+    \item[\textbf{2i.}] User inputs incorrect information
+    \begin{enumerate}
+		\item[\textbf{2i.1}] User submits incorrect information
+        \item[\textbf{2i.2}] Prompts user to recheck information and resubmit
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{2VP. Tech Support/IT \#2}
 \begin{enumerate}
-	\item[\textbf{1i.}] IT provides the app with authorization for user's information and provided email
+    \item[\textbf{1i.}] IT provides the app with authorization for user's information and provided email	
 \end{enumerate}
 \subsubsection*{3VP. KDC Administrator \#3}
 \begin{enumerate}
-	\item[\textbf{4i.}] KDC provides key
-		\begin{enumerate}
-			\item[\textbf{4i.1}] KDC checks users authorization status
-			\item[\textbf{4i.2}] KDC generates encryption key
-		\end{enumerate}
-	\item[\textbf{4i.}] User inputted incorrect information
-		\begin{enumerate}
-			\item[\textbf{4i.1}] KDC checks user authorization status
-			\item[\textbf{4i.2}] Denies access and does not generate key
-		\end{enumerate}
+    \item[\textbf{4i.}] KDC provides key
+    \begin{enumerate}
+        \item[\textbf{4i.1}] KDC checks users authorization status
+        \item[\textbf{4i.2}] KDC generates encryption key
+    \end{enumerate}
+    \item[\textbf{4i.}] User inputted incorrect information
+    \begin{enumerate}
+        \item[\textbf{4i.1}] KDC checks user authorization status
+        \item[\textbf{4i.2}] Denies access and does not generate key
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{4VP. Security Auditors/Cybersecurity \#4}
 \textbf{N/A}
@@ -753,7 +759,7 @@ The app’s initial version only considers communication in terms of text-based 
 \textbf{N/A}\\
 
 \noindent \textbf{Global Scenario:}
-\subsubsection*{Precondition:}
+\subsubsection*{Precondition:} 
 \begin{itemize}
 	\item User does not have an account
 	\item User was granted access to company issued device/email
@@ -770,42 +776,42 @@ The app’s initial version only considers communication in terms of text-based 
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] User inputs incorrect information
-		\begin{enumerate}
-			\item[\textbf{2i.1}] User submits incorrect information
-			\item[\textbf{2i.2}] Prompts user to recheck information and resubmit
-		\end{enumerate}
+    \item[\textbf{2i.}] User inputs incorrect information
+    \begin{enumerate}
+		\item[\textbf{2i.1}] User submits incorrect information
+        \item[\textbf{2i.2}] Prompts user to recheck information and resubmit
+    \end{enumerate}
 \end{enumerate}
 
 \section*{7BE. Authentication Protocol \#7}
-\subsubsection*{Precondition:}
+\subsubsection*{Precondition:} 
 \begin{itemize}
-	\item User attempts to access the chat application
-	\item Initiates authentication process
+    \item User attempts to access the chat application
+    \item Initiates authentication process
 \end{itemize}
 \subsubsection*{1VP. User \#1}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item The user opens the chat application
-	\item The user provides their username and password to sign in to the chat application
-	\item The application authenticates the user's credentials
-	\item Upon successful authentication, the user gains access to the application's features
+    \item The user opens the chat application
+    \item The user provides their username and password to sign in to the chat application
+    \item The application authenticates the user's credentials
+    \item Upon successful authentication, the user gains access to the application's features
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{2i.}] User inputs incorrect information
-		\begin{enumerate}
-			\item[\textbf{2i.1}] Prompted to re-enter information
-		\end{enumerate}
+    \item[\textbf{2i.}] User inputs incorrect information
+    \begin{enumerate}
+        \item[\textbf{2i.1}] Prompted to re-enter information
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{2VP. Tech Support/IT \#2}
 \begin{enumerate}
-	\item[\textbf{2i.}] User has too many failed attempts to authenticate
-		\begin{enumerate}
-			\item[\textbf{2i.1}] IT support is notified of the failed attempts
-			\item[\textbf{2i.2}] IT support will contact the user to assist with the authentication process
-			\item[\textbf{2i.3}] IT support will reset the user's password if necessary
-		\end{enumerate}
+    \item[\textbf{2i.}] User has too many failed attempts to authenticate
+    \begin{enumerate}
+        \item[\textbf{2i.1}] IT support is notified of the failed attempts
+        \item[\textbf{2i.2}] IT support will contact the user to assist with the authentication process
+        \item[\textbf{2i.3}] IT support will reset the user's password if necessary
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{3VP. KDC Administrator \#3}
 \textbf{N/A}
@@ -817,63 +823,63 @@ The app’s initial version only considers communication in terms of text-based 
 \textbf{N/A}\\
 
 \noindent \textbf{Global Scenario:}
-\subsubsection*{Precondition:}
+\subsubsection*{Precondition:} 
 \begin{itemize}
-	\item User attempts to access the chat application
-	\item Initiates authentication process
+    \item User attempts to access the chat application
+    \item Initiates authentication process
 \end{itemize}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User opens the chat application
-	\item User provides their username and password
-	\item The application authenticates the user's credentials
-	\item Upon successful authentication, the user gains access to the application's features
+    \item User opens the chat application
+    \item User provides their username and password
+    \item The application authenticates the user's credentials
+    \item Upon successful authentication, the user gains access to the application's features
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{2i.}] User inputs incorrect information
-		\begin{enumerate}
-			\item[\textbf{2i.1}] Prompted to re-enter information
-		\end{enumerate}
+    \item[\textbf{2i.}] User inputs incorrect information
+    \begin{enumerate}
+        \item[\textbf{2i.1}] Prompted to re-enter information
+    \end{enumerate}
 \end{enumerate}
 
 \section*{8BE. Key Update \#8}
-\subsubsection*{Precondition:}
+\subsubsection*{Precondition:} 
 \begin{itemize}
-	\item The KDC has new keys to distribute for secure communication.
+    \item The KDC has new keys to distribute for secure communication.
 \end{itemize}
 \subsubsection*{1VP. User}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item KDC sends new key updates to user’s device
-	\item User receives a notification about the availability of new keys.
-	\item User's device automatically updates the keys without requiring manual intervention
-	\item User continues to use the secure chat application with updated keys
+    \item KDC sends new key updates to user’s device
+    \item User receives a notification about the availability of new keys.
+    \item User's device automatically updates the keys without requiring manual intervention
+    \item User continues to use the secure chat application with updated keys
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{2i.}] User misses notification/update because they were disconnected
-		\begin{enumerate}
-			\item[\textbf{2i.1}] User can manually hit update button and update keys
-		\end{enumerate}
+    \item[\textbf{2i.}] User misses notification/update because they were disconnected
+    \begin{enumerate}
+        \item[\textbf{2i.1}] User can manually hit update button and update keys
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{2VP. Tech Support/IT \#2}
 \textbf{N/A}
 \subsubsection*{3VP. KDC Administrator \#3}
 \begin{enumerate}
-	\item[\textbf{1i.}] KDC generates new keys and pushes notifications for key updates
-		\begin{enumerate}
-			\item[\textbf{1i.1}] KDC sends new key updates to user’s device
-			\item[\textbf{1i.2}] KDC sends a notification about the availability of new keys
-		\end{enumerate}
+    \item[\textbf{1i.}] KDC generates new keys and pushes notifications for key updates
+    \begin{enumerate}
+    	\item[\textbf{1i.1}] KDC sends new key updates to user’s device
+    	\item[\textbf{1i.2}] KDC sends a notification about the availability of new keys
+	\end{enumerate}	
 \end{enumerate}
 \subsubsection*{4VP. Security Auditors/Cybersecurity \#4}
 \begin{enumerate}
-	\item[\textbf{1i.}] Security Auditors/Cybersecurity monitors the key update process
-		\begin{enumerate}
-			\item[\textbf{1i.1}] Security Auditors/Cybersecurity checks the integrity of the new keys
-			\item[\textbf{1i.2}] Security Auditors/Cybersecurity ensure the new keys are distributed securely
-		\end{enumerate}
+    \item[\textbf{1i.}] Security Auditors/Cybersecurity monitors the key update process
+    \begin{enumerate}
+		\item[\textbf{1i.1}] Security Auditors/Cybersecurity checks the integrity of the new keys
+		\item[\textbf{1i.2}] Security Auditors/Cybersecurity ensure the new keys are distributed securely 
+	\end{enumerate}
 \end{enumerate}
 \subsubsection*{5VP. Legal Department \#5}
 \textbf{N/A}
@@ -881,47 +887,47 @@ The app’s initial version only considers communication in terms of text-based 
 \textbf{N/A}\\
 
 \noindent \textbf{Global Scenario:}
-\subsubsection*{Precondition:}
+\subsubsection*{Precondition:} 
 \begin{itemize}
-	\item The KDC has new keys to distribute for secure communication.
+    \item The KDC has new keys to distribute for secure communication.
 \end{itemize}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item KDC sends new key updates to user’s device
-	\item User receives a notification about the availability of new keys.
-	\item User's device automatically updates the keys without requiring manual intervention
-	\item User continues to use the secure chat application with updated keys
+    \item KDC sends new key updates to user’s device
+    \item User receives a notification about the availability of new keys.
+    \item User's device automatically updates the keys without requiring manual intervention
+    \item User continues to use the secure chat application with updated keys
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{2i.}] User misses notification/update because they were disconnected
-		\begin{enumerate}
-			\item[\textbf{2i.1}] User can manually hit update button and update keys
-		\end{enumerate}
+    \item[\textbf{2i.}] User misses notification/update because they were disconnected
+    \begin{enumerate}
+        \item[\textbf{2i.1}] User can manually hit update button and update keys
+    \end{enumerate}
 \end{enumerate}
 
 \section*{\textcolor{red}{9BE. Biometric Authentication \#9}}
-\subsubsection*{Preconditions:}
+\subsubsection*{Preconditions:} 
 \begin{itemize}
-	\item User has biometric authentication enabled
-	\item Device has methods of biometric authentication built-in
-	\item Chat application supports biometric authentication
+    \item User has biometric authentication enabled
+    \item Device has methods of biometric authentication built-in
+    \item Chat application supports biometric authentication
 \end{itemize}
 \subsubsection*{1VP. User}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User opens the app
-	\item The app prompts the user for biometric authentication (ex. fingerprint, facial recognition)
-	\item User provides biometric data
-	\item The app verifies the biometric data and grants access to the app upon successful authentication
+    \item User opens the app
+    \item The app prompts the user for biometric authentication (ex. fingerprint, facial recognition)
+    \item User provides biometric data
+    \item The app verifies the biometric data and grants access to the app upon successful authentication
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{4i.}] Biometric data fails
-		\begin{enumerate}
-			\item[\textbf{4i.1}] Prompts user to enter password
-			\item[\textbf{4i.2}] Grants access to app with correct password
-		\end{enumerate}
+    \item[\textbf{4i.}] Biometric data fails
+    \begin{enumerate}
+        \item[\textbf{4i.1}] Prompts user to enter password
+        \item[\textbf{4i.2}] Grants access to app with correct password
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{2VP. Tech Support/IT}
 \textbf{N/A}
@@ -929,11 +935,11 @@ The app’s initial version only considers communication in terms of text-based 
 \textbf{N/A}
 \subsubsection*{4VP. Security Auditors/Cybersecurity}
 \begin{enumerate}
-	\item[\textbf{4i.}] Security Auditors/Cybersecurity ensure biometric data and authentication is secure
-		\begin{enumerate}
-			\item[\textbf{4i.1}] Biometric data is provided by the user
-			\item[\textbf{4i.2}] Biometric data is encrypted and stored securely on the device
-		\end{enumerate}
+    \item[\textbf{4i.}] Security Auditors/Cybersecurity ensure biometric data and authentication is secure
+    \begin{enumerate}
+        \item[\textbf{4i.1}] Biometric data is provided by the user
+        \item[\textbf{4i.2}] Biometric data is encrypted and stored securely on the device
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{5VP. Legal Department}
 \textbf{N/A}
@@ -941,51 +947,51 @@ The app’s initial version only considers communication in terms of text-based 
 \textbf{N/A}
 
 \subsection*{Global Scenario:}
-\subsubsection*{Preconditions:}
+\subsubsection*{Preconditions:} 
 \begin{itemize}
-	\item User has biometric authentication enabled
-	\item Device has methods of biometric authentication built-in
-	\item Chat application supports biometric authentication
+    \item User has biometric authentication enabled
+    \item Device has methods of biometric authentication built-in
+    \item Chat application supports biometric authentication
 \end{itemize}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User opens the app
-	\item The app prompts the user for biometric authentication (ex. fingerprint, facial recognition)
-	\item User provides biometric data
-	\item The app verifies the biometric data and grants access to the app upon successful authentication
+    \item User opens the app
+    \item The app prompts the user for biometric authentication (ex. fingerprint, facial recognition)
+    \item User provides biometric data
+    \item The app verifies the biometric data and grants access to the app upon successful authentication
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{4i.}] Biometric data fails
-		\begin{enumerate}
-			\item[\textbf{4i.1}] Prompts user to enter password
-			\item[\textbf{4i.2}] Grants access to app with correct password
-		\end{enumerate}
+    \item[\textbf{4i.}] Biometric data fails
+    \begin{enumerate}
+        \item[\textbf{4i.1}] Prompts user to enter password
+        \item[\textbf{4i.2}] Grants access to app with correct password
+    \end{enumerate}
 \end{enumerate}
 
 
 \section*{\textcolor{red}{10BE. Geolocation \#10}}
-\subsubsection*{Preconditions:}
+\subsubsection*{Preconditions:} 
 \begin{itemize}
-	\item The app is installed on the user's device
-	\item The device has location services enabled
-	\item The company defines specific areas where access to the application is allowed
+    \item The app is installed on the user's device
+    \item The device has location services enabled
+    \item The company defines specific areas where access to the application is allowed
 \end{itemize}
 \subsubsection*{1VP. User}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User launches the app
-	\item The app detects the user's location using geolocation services
-	\item If the user is within the designated area, access to the application is granted
-	\item User can use the application as usual
+    \item User launches the app
+    \item The app detects the user's location using geolocation services
+    \item If the user is within the designated area, access to the application is granted
+    \item User can use the application as usual
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{3i.}] User is outside the designated area
-		\begin{enumerate}
-			\item[\textbf{3i.1}] They are notified that they are outside the designated area
-			\item[\textbf{3i.2}] Access to the application is restricted
-		\end{enumerate}
+    \item[\textbf{3i.}] User is outside the designated area
+    \begin{enumerate}
+        \item[\textbf{3i.1}] They are notified that they are outside the designated area
+        \item[\textbf{3i.2}] Access to the application is restricted
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{2VP. Tech Support/IT}
 \textbf{N/A}
@@ -993,10 +999,10 @@ The app’s initial version only considers communication in terms of text-based 
 \textbf{N/A}
 \subsubsection*{4VP. Security Auditors/Cybersecurity}
 \begin{enumerate}
-	\item[\textbf{2i.}] The app detects the users location
-		\begin{enumerate}
-			\item[\textbf{2i.1}] The application securely stores the user's location data and checks if the user is within the designated area, locally, on the device
-		\end{enumerate}
+    \item[\textbf{2i.}] The app detects the users location
+    \begin{enumerate}
+        \item[\textbf{2i.1}] The application securely stores the user's location data and checks if the user is within the designated area, locally, on the device
+    \end{enumerate}
 \end{enumerate}
 \subsubsection*{5VP. Legal Department}
 \textbf{N/A}
@@ -1004,26 +1010,26 @@ The app’s initial version only considers communication in terms of text-based 
 \textbf{N/A}\\
 
 \noindent \textbf{Global Scenario:}
-\subsubsection*{Preconditions:}
+\subsubsection*{Preconditions:} 
 \begin{itemize}
-	\item The app is installed on the user's device
-	\item The device has location services enabled
-	\item The company defines specific areas where access to the application is allowed
+    \item The app is installed on the user's device
+    \item The device has location services enabled
+    \item The company defines specific areas where access to the application is allowed
 \end{itemize}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User launches the app
-	\item The app detects the user's location using geolocation services
-	\item If the user is within the designated area, access to the application is granted
-	\item User can use the application as usual
+    \item User launches the app
+    \item The app detects the user's location using geolocation services
+    \item If the user is within the designated area, access to the application is granted
+    \item User can use the application as usual
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{3i.}] User is outside the designated area
-		\begin{enumerate}
-			\item[\textbf{3i.1}] They are notified that they are outside the designated area
-			\item[\textbf{3i.2}] Access to the application is restricted
-		\end{enumerate}
+    \item[\textbf{3i.}] User is outside the designated area
+    \begin{enumerate}
+        \item[\textbf{3i.1}] They are notified that they are outside the designated area
+        \item[\textbf{3i.2}] Access to the application is restricted
+    \end{enumerate}
 \end{enumerate}
 
 
@@ -1556,11 +1562,6 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 	\item 5.2, 5.3 - Usability and Humanity + Performance Non Functional Requirements.
 	\item Reviewed the whole document as a group
 \end{itemize}
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\textwidth]{ViroSignature.jpg}
-	\label{fig:signature}
-\end{figure}
 
 \subsection*{Krish Dogra:}
 \begin{itemize}
@@ -1569,22 +1570,22 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 	\item Reviewed the whole document as a group
 \end{itemize}
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\textwidth]{KrishSignature.jpg}
-	\label{fig:signature}
+    \centering
+    \includegraphics[width=0.5\textwidth]{KrishSignature.jpg}
+    \label{fig:signature}
 \end{figure}
 
 \subsection*{Leo Vugert:}
 \begin{itemize}
-	\item Section 2.3 - User Characteristics and Roles
-	\item Section 3 - The Use Case Diagram
+    \item Section 2.3 - User Characteristics and Roles
+    \item Section 3 - The Use Case Diagram
 	\item Section 4 - Highlights of Functional Requirements (Business Events 6 - 10)
-	\item Reviewed the whole document as a group
+    \item Reviewed the whole document as a group
 \end{itemize}
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\textwidth]{LeoSignature.jpg}
-	\label{fig:signature}
+    \centering
+    \includegraphics[width=0.5\textwidth]{LeoSignature.jpg}
+    \label{fig:signature}
 \end{figure}
 
 
