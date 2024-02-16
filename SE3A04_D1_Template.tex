@@ -1316,7 +1316,7 @@ The app’s initial version only considers communication in terms of text-based 
 	\item The KDC should be able to handle 20\% of the userbase’s requests at the same time. \newline
 	      \textbf{Rationale:} Ensures that the KDC meets capacity while also considering scalability in terms of requests. We could say a fixed number such as 20 but if the company has 10000 people with the app there is a high likelihood that more than 20 people request keys at the same time during peak usage of the app. By maintaining this requirement as a percentage, we can maintain both scalability and have good capacity throughput.
 	\item The Initial Database Server should have a minimum of 1TB storage before scaling. \newline
-	      \textbf{Rationale:}  We want to have a large base server size to ensure that we do not need to start scaling unnecessarily expending valuable resources on maintaining the database. 1TB of storage can store multiple years worth of data without
+	      \textbf{Rationale:}  We want to have a large base server size to ensure that we do not need to start scaling unnecessarily expending valuable resources on maintaining the database. 1TB of storage can store multiple years worth of data without requiring any scaling since text messages are very small in size.
 
 \end{enumerate}
 % End SubSubSection
