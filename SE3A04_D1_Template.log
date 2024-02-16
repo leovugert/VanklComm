@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.3)  15 FEB 2024 11:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.3)  16 FEB 2024 03:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -178,6 +178,9 @@ LaTeX Warning: Label `sub:user_characteristics' multiply defined.
 
 LaTeX Warning: Label `sub:user_characteristics' multiply defined.
 
+
+LaTeX Warning: Label `fig:signature' multiply defined.
+
 )
 \openout1 = `SE3A04_D1_Template.aux'.
 
@@ -337,69 +340,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 376--377
 
  []
 
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 470--473
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 421--424
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 527--529
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 529--532
-
- []
-
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 597--599
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 478--480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 599--602
+Underfull \hbox (badness 10000) in paragraph at lines 480--483
 
  []
 
-[13]
-Overfull \hbox (5.41127pt too wide) in paragraph at lines 613--615
+[10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 548--550
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--553
+
+ []
+
+[12]
+Overfull \hbox (5.41127pt too wide) in paragraph at lines 564--566
 []\OT1/cmr/m/n/10 A user faces is-sues when try-ing to open their con-tact book, such as ac-cess-ing de-lays or miss-ing/incomplete
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 658--660
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 609--611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 660--663
+Underfull \hbox (badness 10000) in paragraph at lines 611--614
 
  []
 
-[15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 749--752
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 680--683
 
  []
 
-[17] [18] [19] [20] [21] [22] [23] [24] [25] (./SE3A04_D1_Template.aux)
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 753--754
+
+ []
+
+[17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 817--818
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 881--882
+
+ []
+
+[20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 1004--1005
+
+ []
+
+[22] [23] [24] [25] [26] [27] [28] [29]
+<KrishSignature.jpg, id=106, 602.25pt x 146.79843pt>
+File: KrishSignature.jpg Graphic file (type jpg)
+<use KrishSignature.jpg>
+Package pdftex.def Info: KrishSignature.jpg  used on input line 1568.
+(pdftex.def)             Requested size: 234.8775pt x 57.25114pt.
+<LeoSignature.jpg, id=107, 1440.38126pt x 658.46pt>
+File: LeoSignature.jpg Graphic file (type jpg)
+<use LeoSignature.jpg>
+Package pdftex.def Info: LeoSignature.jpg  used on input line 1581.
+(pdftex.def)             Requested size: 234.8775pt x 107.3652pt.
+ [30 <./KrishSignature.jpg> <./LeoSignature.jpg>] (./SE3A04_D1_Template.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3589 strings out of 476025
- 55251 string characters out of 5790017
+ 3605 strings out of 476025
+ 55570 string characters out of 5790017
  1863388 words of memory out of 5000000
- 24004 multiletter control sequences out of 15000+600000
+ 24017 multiletter control sequences out of 15000+600000
  520831 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,9n,62p,960b,372s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on SE3A04_D1_Template.pdf (25 pages, 214401 bytes).
+Output written on SE3A04_D1_Template.pdf (30 pages, 387666 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
+ 143 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
