@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.13)  14 FEB 2024 19:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.13)  16 FEB 2024 09:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -168,7 +168,20 @@ Package color Info: Driver file: pdftex.def on input line 149.
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count274
 \l__pdf_internal_box=\box53
-) (./SE3A04_D1_Template.aux)
+) (./SE3A04_D1_Template.aux
+
+LaTeX Warning: Label `sub:user_characteristics' multiply defined.
+
+
+LaTeX Warning: Label `sub:user_characteristics' multiply defined.
+
+
+LaTeX Warning: Label `sub:user_characteristics' multiply defined.
+
+
+LaTeX Warning: Label `fig:signature' multiply defined.
+
+)
 \openout1 = `SE3A04_D1_Template.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -249,57 +262,57 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--85
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
 
 
-Overfull \hbox (6.02397pt too wide) in paragraph at lines 105--107
+Overfull \hbox (6.02397pt too wide) in paragraph at lines 100--102
 \OT1/cmr/m/n/10 Available: https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40 
  []
 
 
-Overfull \hbox (4.62561pt too wide) in paragraph at lines 107--109
+Overfull \hbox (4.62561pt too wide) in paragraph at lines 102--104
 \OT1/cmr/m/n/10 Available: https://bootcamp.uxdesign.cc/why-is-dark-mode-more-than-just-a-trend-224b8163acc6. Ac-
  []
 
 
-Overfull \hbox (4.0515pt too wide) in paragraph at lines 109--111
+Overfull \hbox (4.0515pt too wide) in paragraph at lines 104--106
 []\OT1/cmr/m/n/10 ] Wash-ing-ton Uni-ver-sity in St.Louis, \Per-for-mance Anal-y-sis of Data En-cryp-tion Al-go-rithms," Wustl.edu,
  []
 
 [2]
-Overfull \hbox (3.2321pt too wide) in paragraph at lines 120--122
+Overfull \hbox (3.2321pt too wide) in paragraph at lines 115--117
 []\OT1/cmr/m/n/10 ] \Google Play." Ac-cessed: Feb. 11, 2024. On-line. Avail-able: https://play.google.com/about/developer-
  []
 
 
-Overfull \hbox (4.05154pt too wide) in paragraph at lines 124--125
+Overfull \hbox (4.05154pt too wide) in paragraph at lines 119--120
 \OT1/cmr/m/n/10 Ac-cessed: Feb. 11, 2024. On-line. Avail-able: https://medium.com/swlh/android-app-quality-standards-
  []
 
 <./images//blockdiagram.png, id=16, 469.755pt x 285.31593pt>
 File: ./images//blockdiagram.png Graphic file (type png)
 <use ./images//blockdiagram.png>
-Package pdftex.def Info: ./images//blockdiagram.png  used on input line 155.
+Package pdftex.def Info: ./images//blockdiagram.png  used on input line 150.
 (pdftex.def)             Requested size: 469.75386pt x 285.31523pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--157
+Underfull \hbox (badness 10000) in paragraph at lines 145--152
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 193--193
+Underfull \hbox (badness 10000) in paragraph at lines 188--188
 []\OT1/cmr/m/n/10 Account Man-age-ment
  []
 
 
-Overfull \hbox (37.94182pt too wide) in paragraph at lines 164--244
+Overfull \hbox (37.94182pt too wide) in paragraph at lines 159--239
  [] 
  []
 
@@ -310,37 +323,117 @@ Overfull \vbox (49.6366pt too high) has occurred while \output is active []
 <./images//3A04_D1.png, id=28, 463.7325pt x 432.61626pt>
 File: ./images//3A04_D1.png Graphic file (type png)
 <use ./images//3A04_D1.png>
-Package pdftex.def Info: ./images//3A04_D1.png  used on input line 245.
+Package pdftex.def Info: ./images//3A04_D1.png  used on input line 240.
 (pdftex.def)             Requested size: 370.9865pt x 346.09348pt.
  [6 <./images//3A04_D1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 421--424
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 478--480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 480--483
 
  []
 
-[7] [8] [9] [10] [11] [12] [13] [14] (./SE3A04_D1_Template.aux) ) 
+[10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 548--550
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--553
+
+ []
+
+[12]
+Overfull \hbox (5.41127pt too wide) in paragraph at lines 564--566
+[]\OT1/cmr/m/n/10 A user faces is-sues when try-ing to open their con-tact book, such as ac-cess-ing de-lays or miss-ing/incomplete
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 609--611
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 611--614
+
+ []
+
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 680--683
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 753--754
+
+ []
+
+[17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 817--818
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 881--882
+
+ []
+
+[20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 1004--1005
+
+ []
+
+[22] [23] [24] [25] [26] [27] [28] [29]
+<KrishSignature.jpg, id=106, 602.25pt x 146.79843pt>
+File: KrishSignature.jpg Graphic file (type jpg)
+<use KrishSignature.jpg>
+Package pdftex.def Info: KrishSignature.jpg  used on input line 1568.
+(pdftex.def)             Requested size: 234.8775pt x 57.25114pt.
+<LeoSignature.jpg, id=107, 1440.38126pt x 658.46pt>
+File: LeoSignature.jpg Graphic file (type jpg)
+<use LeoSignature.jpg>
+Package pdftex.def Info: LeoSignature.jpg  used on input line 1581.
+(pdftex.def)             Requested size: 234.8775pt x 107.3652pt.
+ [30 <./KrishSignature.jpg> <./LeoSignature.jpg>] (./SE3A04_D1_Template.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3588 strings out of 476093
- 54800 string characters out of 5795583
+ 3604 strings out of 476093
+ 55119 string characters out of 5795583
  1862787 words of memory out of 5000000
- 23932 multiletter control sequences out of 15000+600000
+ 23945 multiletter control sequences out of 15000+600000
  520831 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,9n,62p,1007b,372s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on SE3A04_D1_Template.pdf (14 pages, 194475 bytes).
+Output written on SE3A04_D1_Template.pdf (30 pages, 387666 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 143 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
