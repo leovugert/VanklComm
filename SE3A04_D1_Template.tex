@@ -132,7 +132,7 @@ Section 2 provides an overview of the product’s description in terms of the ge
 % End SubSection
 
 % End Section
-
+\newpage
 \section{Overall Product Description}
 \label{sec:overall_description}
 % Begin Section
@@ -286,23 +286,16 @@ Employee
 \subsection{Constraints}
 \label{sub:constraints}
 % Begin SubSection
-\subsection*{1. Platform Limitations:}
-The application must be developed specifically for the Android platform, limiting the use of platform-specific features and functionalities available on other mobile operating systems.
+\begin{enumerate}
+	\item \textbf{Platform Limitations: }The application must be developed specifically for the Android platform, limiting the use of platform-specific features and functionalities available on other mobile operating systems.
+	\item \textbf{Resource Constraints: }Developers must consider the limited computational resources (CPU, memory) and battery life of mobile devices, optimizing the application for efficiency and performance.
+	\item \textbf{Security Compliance: }The application must adhere to strict security standards and guidelines mandated by the organization and regulatory authorities, constraining certain design and implementation choices to ensure data confidentiality and integrity.
+	\item \textbf{Compatibility Requirements: }The application must be compatible with a wide range of Android devices and operating system versions, constraining the use of certain APIs or features that may not be universally supported across devices.
+	\item \textbf{Budgetary Limitations: }Development efforts must be mindful of budget constraints and resource allocations, potentially impacting the selection of development tools, technologies, and outsourcing decisions.
+	\item \textbf{Legal and Regulatory Constraints: }Developers must comply with legal and regulatory requirements governing data privacy, security, and intellectual property rights, influencing architectural decisions and feature implementations.
 
-\subsection*{2. Resource Constraints:}
-Developers must consider the limited computational resources (CPU, memory) and battery life of mobile devices, optimizing the application for efficiency and performance.
+\end{enumerate}
 
-\subsection*{3. Security Compliance:}
-The application must adhere to strict security standards and guidelines mandated by the organization and regulatory authorities, constraining certain design and implementation choices to ensure data confidentiality and integrity.
-
-\subsection*{4. Compatibility Requirements:}
-The application must be compatible with a wide range of Android devices and operating system versions, constraining the use of certain APIs or features that may not be universally supported across devices.
-
-\subsection*{5. Budgetary Limitations:}
-Development efforts must be mindful of budget constraints and resource allocations, potentially impacting the selection of development tools, technologies, and outsourcing decisions.
-
-\subsection*{6. Legal and Regulatory Constraints:}
-Developers must comply with legal and regulatory requirements governing data privacy, security, and intellectual property rights, influencing architectural decisions and feature implementations.
 % End SubSection
 
 \subsection{Assumptions and Dependencies}
@@ -326,17 +319,16 @@ Other Assumptions with Potential Requirement Implications
 \subsection{Apportioning of Requirements}
 \label{sub:apportioning_of_requirements}
 % Begin SubSection
-\subsection*{1. Cross-Platform Compatibility:}
-The initial version of the secure chat application will be strictly developed for the Android platform. However, we will consider extending support to iOS and other mobile operating systems in later versions. This will allow our application to cater to a wider variety of users.
+\begin{enumerate}
+	\item \textbf{Cross-Platform Compatibility: }The initial version of the secure chat application will be strictly developed for the Android platform. However, we will consider extending support to iOS and other mobile operating systems in later versions. This will allow our application to cater to a wider variety of users.
+	\item \textbf{Secure Goup Chat Communication: }The initial version of our application will only provide encrypted one-on-one communication between company employees. Future versions may introduce a group chat feature, which allows multiple users to communicate in a group setting, all the while ensuring a safe and secure platform. This will benefit users by allowing them to efficiently coordinate tasks with many employees, including file transfer, calendar scheduling, and more.
+	\item \textbf{Secure Video Conferencing: }The app’s initial version only considers communication in terms of text-based messages and file sharing between users. However, later versions could support an integration with secure video conferencing systems, allowing users to interact in encrypted video calls for a more immersive experience.
 
-\subsection*{2. Secure Group Chat Communication:}
-The initial version of our application will only provide encrypted one-on-one communication between company employees. Future versions may introduce a group chat feature, which allows multiple users to communicate in a group setting, all the while ensuring a safe and secure platform. This will benefit users by allowing them to efficiently coordinate tasks with many employees, including file transfer, calendar scheduling, and more.
-
-\subsection*{3. Secure Video Conferencing:}
-The app’s initial version only considers communication in terms of text-based messages and file sharing between users. However, later versions could support an integration with secure video conferencing systems, allowing users to interact in encrypted video calls for a more immersive experience.
+\end{enumerate}
 % End SubSection
 
 % End Section
+\newpage
 \section{Use Case Diagram}
 \label{sec:use_case_diagram}
 % Begin Section
@@ -355,7 +347,7 @@ The app’s initial version only considers communication in terms of text-based 
 %	\item Each use case appearing in the diagram should be accompanied by a text description. 
 %\end{enumerate}
 %% End Section
-
+\newpage
 \section{Highlights of Functional Requirements}
 \label{sec:functional_requirements}
 % Begin Section
@@ -1154,7 +1146,7 @@ The app’s initial version only considers communication in terms of text-based 
 %	\end{enumerate}
 
 %End Section
-
+\newpage
 \section{Non-Functional Requirements}
 \label{sec:non-functional_requirements}
 
@@ -1582,7 +1574,7 @@ The app’s initial version only considers communication in terms of text-based 
 % End SubSection
 
 % End Section
-
+\newpage
 \appendix
 \section{Division of Labour}
 \label{sec:division_of_labour}
@@ -1616,6 +1608,7 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 
 \subsection*{Leo Vugert:}
 \begin{itemize}
+	\item Section 1.5 - Overview
 	\item Section 2.3 - User Characteristics and Roles
 	\item Section 3 - The Use Case Diagram
 	\item Section 4 - Highlights of Functional Requirements (Business Events 6 - 10)
@@ -1639,6 +1632,22 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\textwidth]{AlexSignature.png}
+	\label{fig:signature}
+\end{figure}
+
+\subsection*{Noah Goldschmied:}
+\begin{itemize}
+	\item Section 1.2 - Scope
+	\item Section 1.3 - Definitions, Acronyms and Abbreviations
+	\item Section 2.2 - Product Functions
+	\item Section 5.6 - Security Requirements
+	\item Section 5.7 - Cultural and Political Requirements
+	\item Section 5.8 - Legal Requirements
+	\item Reviewed the whole document as a group
+\end{itemize}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{NoahSignature.png}
 	\label{fig:signature}
 \end{figure}
 
