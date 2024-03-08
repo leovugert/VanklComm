@@ -361,10 +361,10 @@ Other Assumptions with Potential Requirement Implications
 	\item BE4 Secure File Sharing
 	\item[\textcolor{red}{\textbullet}] \textcolor{red}{BE5 Broadcasting Channel}
 	\item BE6 User Registration
-	\item BE7 Authentication Protocol
+	\item BE7 User Authentication Protocol
 	\item BE8 Key Updates
 	\item[\textcolor{red}{\textbullet}] \textcolor{red}{BE9 Biometric Authentication}
-	\item[\textcolor{red}{\textbullet}] \textcolor{red}{BE10 Geolocation}
+	\item[\textcolor{red}{\textbullet}] \textcolor{red}{BE10 Geolocating User}
 
 \end{itemize}
 
@@ -711,299 +711,278 @@ Other Assumptions with Potential Requirement Implications
 		\end{enumerate}
 \end{enumerate}
 
-\section*{6BE. User Registration \#6}
-\subsubsection*{Precondition:}
-\begin{itemize}
-	\item User does not have an account
-	\item User was granted access to company issued device/email
-	\item User is connected to company WIFI
-	\item The KDC server is operational
-\end{itemize}
-\subsubsection*{1VP. User \#1}
+\section*{BE6. User Registration \#6}
+\subsubsection*{Precondition:} The user does not already have an account, the user has been granted access to a company issued device and email, the user is connected to the company WIFI, and the KDC server is operational.
+\subsubsection*{VP1. User \#1}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User gains access to make an account
-	\item User initiates sign in
-	\item User inputs information
-	\item User is provided key from KDC
-	\item User is prompted with success message
+	\item The user opens the VanklComm app and initiates the sign in process.
+	\item The user then inputs the appropriate information in the specific fields (i.e. username, password, etc.).
+	\item The agent is then automatically registered with the KDC and sent a key for secure communication.
+	\item The system then prompts a success message to the user.
 \end{enumerate}
 \textbf{Secondary Scenarios:}
 \begin{enumerate}
-	\item[\textbf{2i.}] User inputs incorrect information
+	\item[\textbf{2i.}] The user inputs incorrect information that does not match the company’s records.
 		\begin{enumerate}
-			\item[\textbf{2i.1}] User submits incorrect information
-			\item[\textbf{2i.2}] Prompts user to recheck information and resubmit
+			\item[\textbf{2i.1}] The user inputs incorrect information that does not match the company’s records.
+			\item[\textbf{2i.2}] The system then denies access and prompts the user to check the information they have provided and resubmit the form.
 		\end{enumerate}
 \end{enumerate}
-\subsubsection*{2VP. Tech Support/IT \#2}
+\subsubsection*{VP2. Tech Support/IT \#2}
 \begin{enumerate}
-	\item[\textbf{1i.}] IT provides the app with authorization for user's information and provided email
+	\item[\textbf{1i.}] IT provides the app with authorization for user's information and provided email based off the company's records.
 \end{enumerate}
-\subsubsection*{3VP. KDC Administrator \#3}
+\subsubsection*{VP3. KDC Administrator \#3}
 \begin{enumerate}
-	\item[\textbf{4i.}] KDC provides key
+	\item[\textbf{3i.}] The KDC administrator checks the user's authorization status and generates an key for the user.
 		\begin{enumerate}
-			\item[\textbf{4i.1}] KDC checks users authorization status
-			\item[\textbf{4i.2}] KDC generates encryption key
+			\item[\textbf{3i.1}] The KDC administrator checks the user's authorization status and generates an key for the user.
+			\item[\textbf{3i.2}] The KDC administrator then sends the key to the user.
 		\end{enumerate}
-	\item[\textbf{4i.}] User inputted incorrect information
+	\item[\textbf{2i.}] The user submits incorrect information that does not match the company's records.
 		\begin{enumerate}
-			\item[\textbf{4i.1}] KDC checks user authorization status
-			\item[\textbf{4i.2}] Denies access and does not generate key
+			\item[\textbf{2i.1}] The user submits incorrect information that does not match the company's records.
+			\item[\textbf{2i.2}] The KDC administrator denies access and does not generate a key.
 		\end{enumerate}
 \end{enumerate}
-\subsubsection*{4VP. Security Auditors/Cybersecurity \#4}
+\subsubsection*{VP4. Security Auditors/Cybersecurity \#4}
 \textbf{N/A}
-\subsubsection*{5VP. Legal Department \#5}
+\subsubsection*{VP5. Legal Department \#5}
 \textbf{N/A}
-\subsubsection*{6VP. Board of Directors \#6}
+\subsubsection*{VP6. Board of Directors \#6}
 \textbf{N/A}\\
 
 \noindent \textbf{Global Scenario:}
-\subsubsection*{Precondition:}
-\begin{itemize}
-	\item User does not have an account
-	\item User was granted access to company issued device/email
-	\item User is connected to company WIFI
-	\item The KDC server is operational
-\end{itemize}
+\subsubsection*{Precondition:} The user does not already have an account, the user has been granted access to a company issued device and email, the user is connected to the company WIFI, and the KDC server is operational. IT should also have been notified of an agent who is making an account and should have recieved their information from the company's records.\\
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User gains access to make an account
-	\item User initiates sign in
-	\item User inputs information
-	\item User is provided key from KDC
-	\item User is prompted with success message
+	\item IT submits the user's information to the app to authorize the user when they sign up.
+	\item The user opens the VanklComm app and initiates the sign in process.
+	\item The user then inputs the appropriate information in the specific fields (i.e. username, password, etc.).
+	\item The system checks the information inputter by the user based on the company's records.
+	\item The agent is then automatically registered with the KDC.
+	\item The KDC administrator checks the user's authorization status and generates an key for the user.
+	\item The user is then sent a key for secure communication, allowing them to access secure communication within the app.
+	\item The system then prompts a success message to the user.
 \end{enumerate}
 \textbf{Secondary Scenarios:}
+
 \begin{enumerate}
-	\item[\textbf{2i.}] User inputs incorrect information
+	\item[\textbf{3i.}] The user inputs incorrect information that does not match the company’s records.
 		\begin{enumerate}
-			\item[\textbf{2i.1}] User submits incorrect information
-			\item[\textbf{2i.2}] Prompts user to recheck information and resubmit
+			\item[\textbf{3i.1}] The user inputs incorrect information that does not match the company’s records.
+			\item[\textbf{3i.2}] The KDC authorization fails and a key is not generated nor sent.
+			\item[\textbf{3i.3}] The system then denies access and prompts the user to check the information they have provided and resubmit the form.
 		\end{enumerate}
 \end{enumerate}
 
-\section*{7BE. Authentication Protocol \#7}
-\subsubsection*{Precondition:}
-\begin{itemize}
-	\item User attempts to access the chat application
-	\item Initiates authentication process
-\end{itemize}
-\subsubsection*{1VP. User \#1}
+\section*{BE7. User Authentication Protocol \#7}
+\subsubsection*{Precondition:} The user has attempted to access the chat application and has initiated the authentication process.
+\subsubsection*{VP1. User \#1}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item The user opens the chat application
-	\item The user provides their username and password to sign in to the chat application
-	\item The application authenticates the user's credentials
-	\item Upon successful authentication, the user gains access to the application's features
+	\item The user has opened the chat application and is prompted by the system to sign in.
+	\item The user provides their username and password to sign in to the chat application.
+	\item The application authenticates the user's credentials based on the company's records, their authorization status and the username/password they signed up with.
+	\item Upon successful authentication, the user gains access to the application's features and can access secure communication.
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{2i.}] User inputs incorrect information
+	\item[\textbf{2i.}] The user inputted incorrect information when prompted by the system.
 		\begin{enumerate}
-			\item[\textbf{2i.1}] Prompted to re-enter information
+			\item[\textbf{2i.1}] The user inputted incorrect information when prompted by the system.
+			\item[\textbf{2i.2}] The application authenticates the user's credentials based on the company's records, their authorization status and the username/password they signed up with.
+			\item[\textbf{2i.3}] The application denis access and prompts the user to check the information they have provided and resubmit the form.
 		\end{enumerate}
 \end{enumerate}
-\subsubsection*{2VP. Tech Support/IT \#2}
+\subsubsection*{VP2. Tech Support/IT \#2}
 \begin{enumerate}
-	\item[\textbf{2i.}] User has too many failed attempts to authenticate
+	\item[\textbf{2i.}] The user has attempted to access the chat application and has failed too many times.
 		\begin{enumerate}
-			\item[\textbf{2i.1}] IT support is notified of the failed attempts
-			\item[\textbf{2i.2}] IT support will contact the user to assist with the authentication process
-			\item[\textbf{2i.3}] IT support will reset the user's password if necessary
+			\item[\textbf{2i.1}] IT support is notified of the failed attempts and prompted to take action to ensure the system is not being breached.
+			\item[\textbf{2i.2}] IT support will contact the user to assist with the authentication process.
+			\item[\textbf{2i.3}] IT support must authenticate the user's credentials themselves, then they can offer support.
+			\item[\textbf{2i.3}] IT support will reset the user's user name or password if necessary.
 		\end{enumerate}
 \end{enumerate}
-\subsubsection*{3VP. KDC Administrator \#3}
+\subsubsection*{VP3. KDC Administrator \#3}
 \textbf{N/A}
-\subsubsection*{4VP. Security Auditors/Cybersecurity \#4}
+\subsubsection*{VP4. Security Auditors/Cybersecurity \#4}
 \textbf{N/A}
-\subsubsection*{5VP. Legal Department \#5}
+\subsubsection*{VP5. Legal Department \#5}
 \textbf{N/A}
-\subsubsection*{6VP. Board of Directors \#6}
+\subsubsection*{VP6. Board of Directors \#6}
 \textbf{N/A}\\
 
 \noindent \textbf{Global Scenario:}
-\subsubsection*{Precondition:}
-\begin{itemize}
-	\item User attempts to access the chat application
-	\item Initiates authentication process
-\end{itemize}
+\subsubsection*{Precondition:} The user has attempted to access the chat application and has initiated the authentication process. IT department has the user's information on file.\\
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User opens the chat application
-	\item User provides their username and password
-	\item The application authenticates the user's credentials
-	\item Upon successful authentication, the user gains access to the application's features
+	\item The user has opened the chat application and is prompted by the system to sign in.
+	\item The user provides their username and password to sign in to the chat application.
+	\item The application authenticates the user's credentials based on the company's records, their authorization status and the username/password they signed up with.
+	\item Upon successful authentication, the user gains access to the application's features and can access secure communication.
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{2i.}] User inputs incorrect information
+	\item[\textbf{2i.}] The user inputted incorrect information when prompted by the system.
 		\begin{enumerate}
-			\item[\textbf{2i.1}] Prompted to re-enter information
+			\item[\textbf{2i.1}] The user inputted incorrect information when prompted by the system.
+			\item[\textbf{2i.2}] The application authenticates the user's credentials based on the company's records, their authorization status and the username/password they signed up with.
+			\item[\textbf{2i.3}] The application denis access and prompts the user to check the information they have provided and resubmit the form.
+			\item[\textbf{2i.4}] After too many failed attempts the IT department is notified and will contact the user to assist with the authentication process.
+			\item[\textbf{2i.5}] IT support must authenticate the user's credentials themselves, then they can offer support by changing the user's username or password.
 		\end{enumerate}
 \end{enumerate}
 
-\section*{8BE. Key Update \#8}
-\subsubsection*{Precondition:}
-\begin{itemize}
-	\item The KDC has new keys to distribute for secure communication.
-\end{itemize}
-\subsubsection*{1VP. User}
+\section*{BE8. Key Updates \#8}
+\subsubsection*{Precondition:} The users device is connected to the company WIFI, the KDC is operational and is generating new secure keys for communication.
+\subsubsection*{VP1. User}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item KDC sends new key updates to user’s device
-	\item User receives a notification about the availability of new keys.
-	\item User's device automatically updates the keys without requiring manual intervention
-	\item User continues to use the secure chat application with updated keys
+	\item KDC sends new key updates to user’s device and the user receives a notification about the availability of new keys.
+	\item The user's device automatically updates the keys without requiring manual intervention.
+	\item The user continues to use the secure chat application with updated keys.
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{2i.}] User misses notification/update because they were disconnected
+	\item[\textbf{2i.}] The user misses the notification/update because they were disconnected from the company WIFI.
 		\begin{enumerate}
-			\item[\textbf{2i.1}] User can manually hit update button and update keys
+			\item[\textbf{2i.1}] The user misses the notification/update because they were disconnected from the company WIFI.
+			\item[\textbf{2i.2}] The user must manually choose to update in the system settings.
+			\item[\textbf{2i.3}] The KDC send a new key and the key is updated on the user's device.
 		\end{enumerate}
 \end{enumerate}
-\subsubsection*{2VP. Tech Support/IT \#2}
+\subsubsection*{VP2. Tech Support/IT \#2}
 \textbf{N/A}
-\subsubsection*{3VP. KDC Administrator \#3}
+\subsubsection*{VP3. KDC Administrator \#3}
 \begin{enumerate}
-	\item[\textbf{1i.}] KDC generates new keys and pushes notifications for key updates
+	\item[\textbf{1i.}] The KDC generates new keys and pushes notifications for key updates.
 		\begin{enumerate}
-			\item[\textbf{1i.1}] KDC sends new key updates to user’s device
-			\item[\textbf{1i.2}] KDC sends a notification about the availability of new keys
+			\item[\textbf{1i.1}] The KDC sends new key updates to user’s device.
+			\item[\textbf{1i.2}] The KDC sends a notification about the availability of new keys.
 		\end{enumerate}
 \end{enumerate}
-\subsubsection*{4VP. Security Auditors/Cybersecurity \#4}
+\subsubsection*{VP4. Security Auditors/Cybersecurity \#4}
 \begin{enumerate}
-	\item[\textbf{1i.}] Security Auditors/Cybersecurity monitors the key update process
+	\item[\textbf{1i.}] The security auditors/cybersecurity department monitors the key update process and ensures its security.
 		\begin{enumerate}
-			\item[\textbf{1i.1}] Security Auditors/Cybersecurity checks the integrity of the new keys
-			\item[\textbf{1i.2}] Security Auditors/Cybersecurity ensure the new keys are distributed securely
+			\item[\textbf{1i.1}] Security Auditors/Cybersecurity check the integrity of the new keys that are to be sent out.
+			\item[\textbf{1i.2}] Security Auditors/Cybersecurity ensure the new keys are distributed securely to all the users.
 		\end{enumerate}
 \end{enumerate}
-\subsubsection*{5VP. Legal Department \#5}
+\subsubsection*{VP5. Legal Department \#5}
 \textbf{N/A}
-\subsubsection*{6VP. Board of Directors \#6}
+\subsubsection*{VP6. Board of Directors \#6}
 \textbf{N/A}\\
 
 \noindent \textbf{Global Scenario:}
-\subsubsection*{Precondition:}
-\begin{itemize}
-	\item The KDC has new keys to distribute for secure communication.
-\end{itemize}
+\subsubsection*{Precondition:} The users device is connected to the company WIFI, the KDC is operational and is generating new secure keys for communication.\\
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item KDC sends new key updates to user’s device
-	\item User receives a notification about the availability of new keys.
-	\item User's device automatically updates the keys without requiring manual intervention
-	\item User continues to use the secure chat application with updated keys
+	\item The KDC has generated a new set of keys to deploy to the user.
+	\item THe security auditors/cybersecurity check the integriy and safety of the keys and ensures they are sent out securely.
+	\item The KDC send notification out that there will be a new key update and it will be done automatically.
+	\item KDC sends new key updates to user’s device and the user receives a notification about the availability of new keys.
+	\item The user's device automatically updates the keys without requiring manual intervention.
+	\item The user continues to use the secure chat application with updated keys.
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{2i.}] User misses notification/update because they were disconnected
+	\item[\textbf{2i.}] The user misses the notification/update because they were disconnected from the company WIFI.
 		\begin{enumerate}
-			\item[\textbf{2i.1}] User can manually hit update button and update keys
+			\item[\textbf{2i.1}] The user misses the notification/update because they were disconnected from the company WIFI.
+			\item[\textbf{2i.2}] The user must manually choose to update in the system settings.
+			\item[\textbf{2i.3}] The security auditors/cybersecurity department monitors ensures the new key is secure.
+			\item[\textbf{2i.4}] The KDC send a new key and the key is updated on the uder's device.
 		\end{enumerate}
 \end{enumerate}
 
-\section*{\textcolor{red}{9BE. Biometric Authentication \#9}}
-\subsubsection*{Preconditions:}
-\begin{itemize}
-	\item User has biometric authentication enabled
-	\item Device has methods of biometric authentication built-in
-	\item Chat application supports biometric authentication
-\end{itemize}
-\subsubsection*{1VP. User}
+\section*{\textcolor{red}{BE9. Biometric Authentication \#9}}
+\subsubsection*{Preconditions:} The user has the biometric authentication feature enabled, the device has biometric authentication methods built-in, and the chat application supports biometric authentication.
+\subsubsection*{VP1. User}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User opens the app
-	\item The app prompts the user for biometric authentication (ex. fingerprint, facial recognition)
-	\item User provides biometric data
-	\item The app verifies the biometric data and grants access to the app upon successful authentication
+	\item The user opens the VanklComm app.
+	\item The app prompts the user for biometric authentication (ex. fingerprint, facial recognition).
+	\item The user provides their biometric data.
+	\item The app verifies the biometric data and grants access to the app upon successful authentication.
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{4i.}] Biometric data fails
+	\item[\textbf{4i.}] The user's biometric data fails.
 		\begin{enumerate}
-			\item[\textbf{4i.1}] Prompts user to enter password
-			\item[\textbf{4i.2}] Grants access to app with correct password
+			\item[\textbf{4i.1}] They system prompts the user to enter their password.
+			\item[\textbf{4i.2}] The system grants access to the user with the correct password.
 		\end{enumerate}
 \end{enumerate}
-\subsubsection*{2VP. Tech Support/IT}
+\subsubsection*{VP2. Tech Support/IT}
 \textbf{N/A}
-\subsubsection*{3VP. KDC Administrator}
+\subsubsection*{VP3. KDC Administrator}
 \textbf{N/A}
-\subsubsection*{4VP. Security Auditors/Cybersecurity}
+\subsubsection*{VP4. Security Auditors/Cybersecurity}
 \begin{enumerate}
-	\item[\textbf{4i.}] Security Auditors/Cybersecurity ensure biometric data and authentication is secure
+	\item[\textbf{4i.}] Security Auditors/Cybersecurity ensure biometric data and authentication is secure.
 		\begin{enumerate}
-			\item[\textbf{4i.1}] Biometric data is provided by the user
-			\item[\textbf{4i.2}] Biometric data is encrypted and stored securely on the device
+			\item[\textbf{4i.1}] The biometric data is provided by the user to the device using built-in methods.
+			\item[\textbf{4i.2}] The biometric data is encrypted and stored securely on the device.
 		\end{enumerate}
 \end{enumerate}
-\subsubsection*{5VP. Legal Department}
+\subsubsection*{VP5. Legal Department}
 \textbf{N/A}
-\subsubsection*{6VP. Board of Directors}
+\subsubsection*{VP6. Board of Directors}
 \textbf{N/A}
 
-\subsection*{Global Scenario:}
-\subsubsection*{Preconditions:}
-\begin{itemize}
-	\item User has biometric authentication enabled
-	\item Device has methods of biometric authentication built-in
-	\item Chat application supports biometric authentication
-\end{itemize}
+\subsubsection*{Global Scenario:}
+\subsubsection*{Preconditions:} The user has the biometric authentication feature enabled, the device has biometric authentication methods built-in, and the chat application supports biometric authentication. The security auditors/cybersecurity department has set up a secure way to transmit and save data.\\
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User opens the app
-	\item The app prompts the user for biometric authentication (ex. fingerprint, facial recognition)
-	\item User provides biometric data
-	\item The app verifies the biometric data and grants access to the app upon successful authentication
+	\item The user opens the VanklComm app.
+	\item The app prompts the user for biometric authentication (ex. fingerprint, facial recognition).
+	\item The user provides their biometric data.
+	\item The system verifies the biometric data through a secure process where the data and process is encrypted by the security auditors/cybersecurity department.
+	\item The app verifies the biometric data and grants access to the app upon successful authentication.
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{4i.}] Biometric data fails
+	\item[\textbf{4i.}] The user's biometric data fails.
 		\begin{enumerate}
-			\item[\textbf{4i.1}] Prompts user to enter password
-			\item[\textbf{4i.2}] Grants access to app with correct password
+			\item[\textbf{4i.1}] They system prompts the user to enter their password.
+			\item[\textbf{4i.2}] The system grants access to the user with the correct password.
+			\item[\textbf{4i.3}] Logs of failed biometric data are sent to the security auditors/cybersecurity department for review.
 		\end{enumerate}
 \end{enumerate}
 
 
-\section*{\textcolor{red}{10BE. Geolocation \#10}}
-\subsubsection*{Preconditions:}
-\begin{itemize}
-	\item The app is installed on the user's device
-	\item The device has location services enabled
-	\item The company defines specific areas where access to the application is allowed
-\end{itemize}
-\subsubsection*{1VP. User}
+\section*{\textcolor{red}{BE10. Geolocating User \#10}}
+\subsubsection*{Preconditions:} The app is installed on the user's device, the device has location services enabled, and the company defines specific areas where access to the application is allowed.
+\subsubsection*{VP1. User}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User launches the app
-	\item The app detects the user's location using geolocation services
-	\item If the user is within the designated area, access to the application is granted
-	\item User can use the application as usual
+	\item The user launches the VanklComm app.
+	\item The app detects the user's location using geolocation services.
+	\item If the user is within the designated area, access to the application is granted.
+	\item The user is prompted to submit biometric data and sign in, the user can then use the application as usual.
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{3i.}] User is outside the designated area
+	\item[\textbf{3i.}] The user is outside the designated area set by VanklComm.
 		\begin{enumerate}
-			\item[\textbf{3i.1}] They are notified that they are outside the designated area
-			\item[\textbf{3i.2}] Access to the application is restricted
+			\item[\textbf{3i.1}] They are notified that they are outside the designated area and if they would like to access the app, they must return to it.
+			\item[\textbf{3i.2}] The user's request to access the application is denied.
 		\end{enumerate}
 \end{enumerate}
-\subsubsection*{2VP. Tech Support/IT}
+\subsubsection*{VP2. Tech Support/IT}
 \textbf{N/A}
-\subsubsection*{3VP. KDC Administrator}
+\subsubsection*{VP3. KDC Administrator}
 \textbf{N/A}
-\subsubsection*{4VP. Security Auditors/Cybersecurity}
+\subsubsection*{VP4. Security Auditors/Cybersecurity}
 \begin{enumerate}
-	\item[\textbf{2i.}] The app detects the users location
+	\item[\textbf{2i.}] The app detects the users location.
 		\begin{enumerate}
-			\item[\textbf{2i.1}] The application securely stores the user's location data and checks if the user is within the designated area, locally, on the device
+			\item[\textbf{2i.1}] The app detects the users location.
+			\item[\textbf{2i.2}] The application securely stores the user's location data and checks if the user is within the designated area, locally, on the device.
 		\end{enumerate}
 \end{enumerate}
 \subsubsection*{5VP. Legal Department}
@@ -1012,25 +991,22 @@ Other Assumptions with Potential Requirement Implications
 \textbf{N/A}\\
 
 \noindent \textbf{Global Scenario:}
-\subsubsection*{Preconditions:}
-\begin{itemize}
-	\item The app is installed on the user's device
-	\item The device has location services enabled
-	\item The company defines specific areas where access to the application is allowed
-\end{itemize}
+\subsubsection*{Preconditions:} The app is installed on the user's device, the device has location services enabled, and the company defines specific areas where access to the application is allowed. The security team has a secure way to save and transmit personal data..
+\subsubsection*{VP1. User}
 \textbf{Main Success Scenario:}
 \begin{enumerate}
-	\item User launches the app
-	\item The app detects the user's location using geolocation services
-	\item If the user is within the designated area, access to the application is granted
-	\item User can use the application as usual
+	\item The user launches the VanklComm app.
+	\item The app detects the user's location using geolocation services.
+	\item The app securly transmits and checks this data on the VanklComm app.
+	\item If the user is within the designated area, access to the application is granted.
+	\item The user is prompted to submit biometric data and sign in, the user can then use the application as usual.
 \end{enumerate}
 \textbf{Secondary Success Scenario:}
 \begin{enumerate}
-	\item[\textbf{3i.}] User is outside the designated area
+	\item[\textbf{4i.}] The user is outside the designated area set by VanklComm.
 		\begin{enumerate}
-			\item[\textbf{3i.1}] They are notified that they are outside the designated area
-			\item[\textbf{3i.2}] Access to the application is restricted
+			\item[\textbf{4i.1}] They are notified that they are outside the designated area and if they would like to access the app, they must return to it.
+			\item[\textbf{4i.2}] The user's request to access the application is denied.
 		\end{enumerate}
 \end{enumerate}
 
