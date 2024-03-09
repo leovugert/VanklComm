@@ -34,12 +34,15 @@
 \begin{document}
 
 \maketitle
-\noindent{\bf Tutorial Number:} T0x\\
-{\bf Group Number:} Gx \\
+\noindent{\bf Tutorial Number:} T03\\
+{\bf Group Number:} G06 \\
 {\bf Group Members:}
 \begin{itemize}
-	\item List all Group Member Names (as listed in Avenue)
-	\item You do not need to use student \#s or macid (keep those private).
+	\item Virochaan Ravichandran Gowri
+	\item Alex Yoon
+	\item Noah Goldschmied
+	\item Krish Dogra
+	\item Leo Vugert
 \end{itemize}
 
 \section*{IMPORTANT NOTES}
@@ -93,7 +96,8 @@ Describe what the rest of the document contains and explain how the document is 
 \section{Analysis Class Diagram}
 \label{sec:analysis_class_diagram}
 % Begin Section
-This section should provide an analysis class diagram for your application.
+\includegraphics[width=\textwidth]{../images/ACD.png}
+
 % End Section
 
 
@@ -165,27 +169,195 @@ The KDC Management provides the encryption and decryption functions for the syst
 
 \section{Class Responsibility Collaboration (CRC) Cards}
 \label{sec:class_responsibility_collaboration_crc_cards}
-% Begin Section
-This section should contain all of your CRC cards.
 
-\begin{itemize}
-	\item Provide a CRC Card for each identified class
-	\item Please use the format outlined in tutorial, i.e.,
-	      \begin{table}[ht]
-		      \centering
-		      \begin{tabular}{|p{5cm}|p{5cm}|}
-			      \hline
-			      \multicolumn{2}{|l|}{\textbf{Class Name:}}         \\
-			      \hline
-			      \textbf{Responsibility:} & \textbf{Collaborators:} \\
-			      \hline
-			      \vspace{1in}             &                         \\
-			      \hline
-		      \end{tabular}
-	      \end{table}
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} System Management (Controller)} \\
+		\hline
+		\textbf{Responsibility:}       & \textbf{Collaborators:}                  \\
+		\hline
+		Knows Account Management       & Account Management                       \\
+		Knows Communication Management & Communication Management                 \\
+		Knows Chat Log Management      & Chat Log Management                      \\
+		Knows KDC Management           & KDC Management                           \\
+		\hline
+	\end{tabular}
+\end{table}
 
-\end{itemize}
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Communication Management (Controller)} \\
+		\hline
+		\textbf{Responsibility:}        & \textbf{Collaborators:}                        \\
+		\hline
+		Knows System Management         & System Management                              \\
+		Knows File Sharing UI           & File Sharing UI                                \\
+		Knows Call UI                   & Call UI                                        \\
+		Knows Broadcast UI              & Broadcast UI                                   \\
+		Knows Broadcast Information     & Broadcast Information                          \\
+		Knows File Sharing DB           & File Sharing DB                                \\
+		Knows Communication Information & Communication Information                      \\
+		Knows Communication DB          & Communication DB                               \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} File Sharing UI (Boundary)}     \\
+		\hline
+		\textbf{Responsibility:}                       & \textbf{Collaborators:}  \\
+		\hline
+		Knows Communication Management                 & Communication Management \\
+		Handles the User Interface for file sharing    &                          \\
+		Handles the encryption and decryption of files &                          \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Messaging UI (Boundary)}           \\
+		\hline
+		\textbf{Responsibility:}                          & \textbf{Collaborators:}  \\
+		\hline
+		Knows Communication Management                    & Communication Management \\
+		Handles the User Interface for messaging          &                          \\
+		Handles the encryption and decryption of messages &                          \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Call UI (Boundary)}             \\
+		\hline
+		\textbf{Responsibility:}                       & \textbf{Collaborators:}  \\
+		\hline
+		Knows Communication Management                 & Communication Management \\
+		Handles the User Interface for calls           &                          \\
+		Handles the encryption and decryption of calls &                          \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Broadcast UI (Boundary)}             \\
+		\hline
+		\textbf{Responsibility:}                            & \textbf{Collaborators:}  \\
+		\hline
+		Knows Communication Management                      & Communication Management \\
+		Handles the User Interface for broadcasts           &                          \\
+		Handles the encryption and decryption of broadcasts &                          \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Broadcast Information (Entity)} \\
+		\hline
+		\textbf{Responsibility:}                    & \textbf{Collaborators:}     \\
+		\hline
+		Knows Communication Management              & Communication Management    \\
+		Knows what users belong to broadcasts       &                             \\
+		Knows which users can message in broadcasts &                             \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} File Sharing DB (Entity)}             \\
+		\hline
+		\textbf{Responsibility:}                             & \textbf{Collaborators:}  \\
+		\hline
+		Knows Communication Management                       & Communication Management \\
+		Knows what users sent which files                    &                          \\
+		Knows which users can view individual files          &                          \\
+		Knows where all files that have been sent are stored &                          \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Communication Information (Entity)} \\
+		\hline
+		\textbf{Responsibility:}                    & \textbf{Collaborators:}         \\
+		\hline
+		Knows Communication Management              & Communication Management        \\
+		Knows what users belong to which chat       &                                 \\
+		Knows which users can message in which chat &                                 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Chat Log Management (Controller)} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:}                          \\
+		\hline
+		Knows System Management  & System Management                                \\
+		Knows Chat Log Database  & Chat Log Management                              \\
+		Knows Chat Log UI        & Chat Log UI                                      \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Chat Log Database (Entity)}                               \\
+		\hline
+		\textbf{Responsibility:}                                                  & \textbf{Collaborators:} \\
+		\hline
+		Knows Chat Log Management                                                 & Chat Log Management     \\
+		Knows what user sent each message                                         &                         \\
+		Knows the identifiers of users and the date, time, and content of message &                         \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Chat Log UI (Boundary)} \\
+		\hline
+		\textbf{Responsibility:}          & \textbf{Collaborators:}       \\
+		\hline
+		Knows Chat Log Management         & Chat Log Management           \\
+		Handles presentation of Chat Logs &                               \\
+		\hline
+	\end{tabular}
+\end{table}
+
 % End Section
+
 
 \appendix
 \section{Division of Labour}
