@@ -145,6 +145,10 @@ We chose the Repository Architecture Style for the Account Management and Commun
 \newline
 \newline
 The Pipe and Filter Architecture Style was chosen for the KDC since it provides efficient processing of data with a high throughput and flexibility. Since we are expecting many messages at the same time throughput is a crucial factor to consider and the pipe and filter architecture allows for easy scaling of throughput through concurrency. It also provides simplicity by sectioning different parts of the KDC into filters for encryption and decryption. Finally it also allows for reusability and room to expand by simplify modifying or adding more pipes and filters.
+\begin{center}
+	\includegraphics[width=0.7\paperwidth]{Systemarch.png}
+
+\end{center}
 % End SubSection
 
 \subsection{Subsystems}
