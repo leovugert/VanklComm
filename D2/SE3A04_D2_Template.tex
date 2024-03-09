@@ -12,6 +12,7 @@
 \usepackage{graphicx}
 %\usepackage{extarrows}
 %\usepackage{setspace}
+\graphicspath{ {../images/} }
 %------------------------------------------------------------------------------
 
 % Header and Footer
@@ -32,10 +33,10 @@
 %------------------------------------------------------------------------------
 \begin{document}
 
-\maketitle	
+\maketitle
 \noindent{\bf Tutorial Number:} T0x\\
 {\bf Group Number:} Gx \\
-{\bf Group Members:} 
+{\bf Group Members:}
 \begin{itemize}
 	\item List all Group Member Names (as listed in Avenue)
 	\item You do not need to use student \#s or macid (keep those private).
@@ -45,18 +46,18 @@
 \begin{itemize}
 	%	\item You do \underline{NOT} need to provide a text explanation of each diagram; the diagram should speak for itself
 	\item Please document any non-standard notations that you may have used
-	\begin{itemize}
-		\item \emph{Rule of Thumb}: if you feel there is any doubt surrounding the meaning of your notations, document them
-	\end{itemize}
+	      \begin{itemize}
+		      \item \emph{Rule of Thumb}: if you feel there is any doubt surrounding the meaning of your notations, document them
+	      \end{itemize}
 	\item Some diagrams may be difficult to fit into one page
-	\begin{itemize}
-		\item Ensure that the text is readable when printed, or when viewed at 100\% on a regular laptop-sized screen.
-		\item If you need to break a diagram onto multiple pages, please adopt a system of doing so and thoroughly explain how it can be reconnected from one page to the next; if you are unsure about this, please ask about it
-	\end{itemize}
+	      \begin{itemize}
+		      \item Ensure that the text is readable when printed, or when viewed at 100\% on a regular laptop-sized screen.
+		      \item If you need to break a diagram onto multiple pages, please adopt a system of doing so and thoroughly explain how it can be reconnected from one page to the next; if you are unsure about this, please ask about it
+	      \end{itemize}
 	\item Please submit the latest version of Deliverable 1 with Deliverable 2
-	\begin{itemize}
-		\item Indicate any changes you made.
-	\end{itemize}
+	      \begin{itemize}
+		      \item Indicate any changes you made.
+	      \end{itemize}
 	\item If you do \underline{NOT} have a Division of Labour sheet, your deliverable will \underline{NOT} be marked
 \end{itemize}
 
@@ -111,17 +112,57 @@ This section should provide an overview of the overall architectural design of y
 	\item Provide a structural architecture diagram showing the relationship among the subsystems (if appropriate)
 	\item List any design alternatives you considered, but eliminated (and explain why you eliminated them)
 \end{itemize}
+
+There a 3 primary subsections within the system that utilize their own distinct architecture style but still exist within the overall larger architecture style:
+\begin{center}
+	\begin{tabular}{|p{2in} | p{2in}| p{2in}|}
+		\hline
+		Subsystem                & Purpose                                                                  & Architectural Style \\
+		\hline
+		Account Management       & Create, Login and Manage Account Information and Functions               & Repository          \\
+		\hline
+		Communication Management & Provides communication functionality between different agents and users. & Repository          \\
+		\hline
+		KDC Management           & Provides encryption and decryption functionalities                       & Pipe and Filter     \\
+		\hline
+	\end{tabular}
+\end{center}
+
+The subsystems employ the Repository and the Pipe and Filter architecture styles and the relationship and functionality are further defined in section 3.2.
+\newline
+\newline
+We also include 4 databases on the model level, an account database, a contacts database, a KDC database and a Chat Log database.
+\newline
+\newline
+-Talk about MVC Here
+\newline
+\newline
+We chose the Repository Architecture Style for the Account Management and Communication Management subsystem since it supports easy scalability and utilizes a passive data store meaning the agents are active in controlling the data flow logic. This enables different agents to access different aspects of the system and different parts of data at the same time which will be beneficial for our system. Also having easy scalability through the introduction of new agents is crucial for our use case and easily implemented through this architecture style.
+\newline
+\newline
+The Pipe and Filter Architecture Style was chosen for the KDC since it provides efficient processing of data with a high throughput and flexibility. Since we are expecting many messages at the same time throughput is a crucial factor to consider and the pipe and filter architecture allows for easy scaling of throughput through concurrency. It also provides simplicity by sectioning different parts of the KDC into filters for encryption and decryption. Finally it also allows for reusability and room to expand by simplify modifying or adding more pipes and filters.
 % End SubSection
 
 \subsection{Subsystems}
 \label{sub:subsystems}
 % Begin SubSection
- Provide a list of your subsystems, with a brief description of each. Be sure to document its purpose and relationship to other subsystems.
-
+Provide a list of your subsystems, with a brief description of each. Be sure to document its purpose and relationship to other subsystems.
+\newline
+\newline
+We have 3 primary subsystems that are contained within the overall system which provide distinct functionalities and which also have their own distinct architectural styles for implementation. Our Three distinct subsytems include: Account Management, Communication Management Service, and KDC Managment.
+\newline
+\newline
+The Account Management subsystem provides users with ability to create and login to their account and is responsible for ensuring that only authorized users account access the system by interfacing with the external apis. It also manages users contacts and interfaces with the communication management service to allow for communication and the authentication management for authentication management. It utilizes the repository architecture style.
+\newline
+\newline
+The Communication Management Service provides users with the ability to contact other authorized user by sending and recieving messages. It also allows for the sending and recieving of files through file transfer, the reporting of messages and recieving of announcement board posts. It interacts with the authentication managment to ensure the authentication of users, the KDC Management for encryption and decryption of messages and the chat log managment and adheres to the Repository architecture style.
+\newline
+\newline
+The KDC Management provides the encryption and decryption functions for the system. It interacts with the communication module and utilizes a pipe and filter architecture style.
 % End SubSection
 
 % End Section
-	
+
 \section{Class Responsibility Collaboration (CRC) Cards}
 \label{sec:class_responsibility_collaboration_crc_cards}
 % Begin Section
@@ -129,20 +170,20 @@ This section should contain all of your CRC cards.
 
 \begin{itemize}
 	\item Provide a CRC Card for each identified class
-	\item Please use the format outlined in tutorial, i.e., 
-	\begin{table}[ht]
-		\centering
-		\begin{tabular}{|p{5cm}|p{5cm}|}
-		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name:}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-		\vspace{1in} & \\
-		\hline
-		\end{tabular}
-	\end{table}
-	
+	\item Please use the format outlined in tutorial, i.e.,
+	      \begin{table}[ht]
+		      \centering
+		      \begin{tabular}{|p{5cm}|p{5cm}|}
+			      \hline
+			      \multicolumn{2}{|l|}{\textbf{Class Name:}}         \\
+			      \hline
+			      \textbf{Responsibility:} & \textbf{Collaborators:} \\
+			      \hline
+			      \vspace{1in}             &                         \\
+			      \hline
+		      \end{tabular}
+	      \end{table}
+
 \end{itemize}
 % End Section
 
