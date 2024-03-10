@@ -74,21 +74,23 @@ This section should provide an brief overview of the entire document.
 \subsection{Purpose}
 \label{sub:purpose}
 % Begin SubSection
-State the purpose and intended audience for the document.
+This High-Level Architectural Design has been created to specify the high level overview needed to develop a secure communication app (VanklComm) for our organization. This SRS will ensure to cover functional requirements specifying how the app will perform the secure communication, including viewpoints from stakeholders and common business events and use cases and non-functional requirements outlining specifications of the system.
+\newline\newline
+This document is intended for internal VanklComm stakeholders, prior review of Deliverable 1 is recommended, and technical background knowledge may enhance comprehension.
 % End SubSection
 
 \subsection{System Description}
 \label{sub:system_description}
 % Begin SubSection
-Give a brief description of the system. This could be a paragraph or two to give some context to this document.
-
+The system embraces an Interaction-Oriented Architecture, integrating the Model-View-Controller (MVC) pattern alongside elements from the Repository Architecture Style. This amalgamation offers a robust framework for orchestrating real-time communication, user engagement, and data management.
+\newline\newline
+Subsystems are structured around the Repository and Pipe and Filter architecture styles, fostering a cohesive relationship between components. Additionally, at the model level, the system incorporates four databases: an account database, a contacts database, a Key Distribution Center (KDC) database, and a Chat Log database.
 % End SubSection
 
 \subsection{Overview}
 \label{sub:overview}
 % Begin SubSection
-Describe what the rest of the document contains and explain how the document is organised (e.g. "In Section 2 we discuss...in Section 3...").
-
+In Section 2, you will find the Analysis Class Diagram for VanklComm. Section 3 explores the architectural design, examining considered alternatives and providing insights into design decisions. Lastly, Section 4 unveils Class Responsibility Collaboration (CRC) Cards, offering detailed explanations of class attributes, responsibilities, and interconnections.
 % End SubSection
 
 % End Section
@@ -603,7 +605,7 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 \subsection*{Leo Vugert:}
 \begin{itemize}
 	\item Section 2 - Analysis Class Diagram
-	\item Section 4 - CRC Cards (14-26)
+	\item Section 4 - CRC Cards (13-24)
 	\item Reviewed the whole document as a group
 \end{itemize}
 \begin{figure}[h]
@@ -612,6 +614,29 @@ Include a Division of Labour sheet which indicates the contributions of each tea
 	\label{fig:signature}
 \end{figure}
 
+\subsection*{Noah Goldschmied:}
+\begin{itemize}
+	\item Section 2 - Analysis Class Diagram
+	\item Section 4 - CRC Cards (1-12)
+\end{itemize}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{NoahSignature.png}
+	\label{fig:signature}
+\end{figure}
+
+\subsection*{Alex Yoon:}
+\begin{itemize}
+	\item Section 1.1 - Purpose
+	\item Section 1.2 - System Description
+	\item Section 1.3 - Overview
+	\item Reviewed Section 3
+\end{itemize}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{AlexSignature.png}
+	\label{fig:signature}
+\end{figure}
 % End Section
 
 
