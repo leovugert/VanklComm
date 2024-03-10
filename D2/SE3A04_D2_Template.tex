@@ -125,7 +125,6 @@ There a 3 primary subsections within the system that utilize their own distinct 
 		\hline
 	\end{tabular}
 \end{center}
-
 The subsystems employ the Repository and the Pipe and Filter architecture styles and the relationship and functionality of the subsystems are further defined in section 3.2.
 \newline
 \newline
@@ -136,9 +135,10 @@ Firstly, the Model component utilizes the Repository Architecture Style, acting 
 \newline\newline
 The rationale behind choosing the MVC Architecture Style is threefold - clear separation of concerns, ease of testing, and adaptability to changing requirements. One of the key benefits in using the MVC architecture is that it separates the application space into Model, View, and Controller, promoting modularity and maintainability. For example, when a user sends a message, the Controller component manages the input processing, the Model component then updates the relevant data (i.e. message content, sender, timestamp), and finally, the View component dynamically updates the chat’s interface, thus enforcing a clear separation of concerns. Having a clear separation of concerns is essential in software development, as it allows developers to divide a complex system into independent modules, each assigned a specific responsibility, encouraging modular reusability for other projects. Additionally, an MVC architecture supports ease of testing for quality assurance, due to the separation of concerns characteristic. This separation allows software testers to isolate and test individual components independently, for example, unit tests can focus on the business logic within the Model, while integration tests can verify the interactions between the View and Controller. Lastly, using the MVC Style offers adaptability to changing requirements, by permitting flexibility in changing the user interface based on new security requirements or user preferences. For instance, if the development team decides to add Multi-Factor Authentication (MFA) as an extra layer of security, each component will be individually modified so as to provide the new MFA functionality, without compromising the overall structure.
 \newline\newline
-The rationale behind choosing select elements of the Repository Architecture Style is twofold - transaction support and scalability optimization. An important feature of the Repository pattern is that it supports atomic transactions linearly, which ensures data integrity during security-critical operations. For example, if a user chooses to update their profile or even send multiple messages (not necessarily simultaneously), the Repository will guarantee that these operations are atomic. This essentially means that if any operation were to fail (e.g. due to a security violation), then the system will rewind back to the previous state, maintaining data consistency and integrity. Furthermore, the Repository Architecture supports optimized data storage and retrieval, which enhances the scalability and performance aspects of the system. As the number of registered users increases, the repository is optimized to handle increased user profiles and message volumes. Security measures, including secure encryption and data control, are implemented efficiently in the repository to sustain performance levels, even as demand increases.
+The rationale behind choosing the Repository Architecture Style for certain subsystems is twofold - transaction support and scalability optimization. An important feature of the Repository pattern is that it supports atomic transactions linearly, which ensures data integrity during security-critical operations. For example, if a user chooses to update their profile or even send multiple messages (not necessarily simultaneously), the Repository will guarantee that these operations are atomic. This essentially means that if any operation were to fail (e.g. due to a security violation), then the system will rewind back to the previous state, maintaining data consistency and integrity. Furthermore, the Repository Architecture supports optimized data storage and retrieval, which enhances the scalability and performance aspects of the system. As the number of registered users increases, the repository is optimized to handle increased user profiles and message volumes. Security measures, including secure encryption and data control, are implemented efficiently in the repository to sustain performance levels, even as demand increases.
 \newline\newline
 The Pipe and Filter Architecture Style was chosen specifically for the KDC since it provides efficient processing of data with a high throughput and flexibility. Since we are expecting many messages at the same time throughput is a crucial factor to consider and the pipe and filter architecture allows for easy scaling of throughput through concurrency. It also provides simplicity by sectioning different parts of the KDC into filters for encryption and decryption. Finally it also allows for reusability and room to expand by simplify modifying or adding more pipes and filters.
+\newline\newline
 \begin{center}
 	\includegraphics[width=0.7\paperwidth]{Systemarch.png}
 \end{center}
@@ -155,9 +155,6 @@ Another architectural pattern that was taken into account was the Batch Sequenti
 \subsection{Subsystems}
 \label{sub:subsystems}
 % Begin SubSection
-Provide a list of your subsystems, with a brief description of each. Be sure to document its purpose and relationship to other subsystems.
-\newline
-\newline
 We have 3 primary subsystems that are contained within the overall system which provide distinct functionalities and which also have their own distinct architectural styles for implementation. Our Three distinct subsytems include: Account Management, Communication Management Service, and KDC Managment.
 \newline
 \newline
