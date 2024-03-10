@@ -358,6 +358,212 @@ The KDC Management provides the encryption and decryption functions for the syst
 	\end{tabular}
 \end{table}
 
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Account Management (Controller)}             \\
+		\hline
+		\textbf{Responsibility:}                             & \textbf{Collaborators:}  \\
+		\hline
+		Knows System Management                              & System Management 	      \\
+		Knows Profile Management UI                          & Profile Management UI      \\
+		Knows Login UI							             & Login UI                   \\
+		Knows Create Account UI 						     & Create Account UI          \\
+		Knows Contact Book UI								 & Contact Book UI            \\
+		Knows Contact Book Information						 & Contact Book Information   \\
+		Knows Account DB 								   	 & Account DB                 \\
+		Knows Authentication Information					 & Authentication Information \\
+		Knows Biometric Authentication UI					 & Biometric Authentication UI\\
+		Knows Location Verification 						 & Location Verification      \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Profile Management UI (Boundary)}             \\
+		\hline
+		\textbf{Responsibility:}                             & \textbf{Collaborators:}  \\
+		\hline
+		Knows Account Management							 & Account Management         \\
+		Handles User Interface for user profiles 			 &                            \\
+		Displays user information							 &                            \\
+		Handles “Save Profile” click-event 					 &                            \\
+
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Login UI (Boundary)}             \\
+		\hline
+		\textbf{Responsibility:}                                  & \textbf{Collaborators:}  \\
+		\hline
+		Knows Account Management							      & Account Management         \\
+		Knows usernames and passwords						   	  &                            \\
+		Handles User Interface for entering username and password &                            \\
+		Handles Login button click-event  					   	  &                            \\
+
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Create Account UI (Boundary)}             \\
+		\hline
+		\textbf{Responsibility:}                             & \textbf{Collaborators:}  \\
+		\hline
+		Knows Account Management							 & Account Management         \\
+		Handles the User Interface for creating an account	 &                            \\
+		Handles username and password entry-box 			 &                            \\
+		Handles ”Create Account” click-event 				 &                            \\
+
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Contact Book UI (Boundary)}             \\
+		\hline
+		\textbf{Responsibility:}                             & \textbf{Collaborators:}  \\
+		\hline
+		Knows Account Management							 & Account Management         \\
+		Knows what user’s are saved in a user’s contact book &                            \\
+		Handles username and password entry-box 			 &                            \\
+		Handles “Add”, “Message” and “Call click-events		 &                            \\
+
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Contact Book Information (Entity)}             \\
+		\hline
+		\textbf{Responsibility:}                             & \textbf{Collaborators:}  \\
+		\hline
+		Knows Account Management							 & Account Management         \\
+		Knows Account DB									 & Account DB                 \\
+		Knows which users have which users saved		     &                            \\
+
+
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Account DB (Entity)}             \\
+		\hline
+		\textbf{Responsibility:}                             & \textbf{Collaborators:}  \\
+		\hline
+		Knows Account Management							 & Account Management         \\
+		Knows User Information							     & Contact Book Information   \\
+
+
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Biometric Authentication (Boundary)}             \\
+		\hline
+		\textbf{Responsibility:}                             & \textbf{Collaborators:}  \\
+		\hline
+		Knows Account Management							          & Account Management         \\
+		Knows User’s authentication data stored locally on the device &                            \\
+		Scans Fingerprint/Face to login								  &                            \\
+
+
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Location Verification (Entity)}             \\
+		\hline
+		\textbf{Responsibility:}                             & \textbf{Collaborators:}  \\
+		\hline
+		Knows Account Management	    			         & Account Management         \\
+		Checks user’s location 								 &                            \\
+		Notifies user if they are not in the boundary	     &                            \\
+
+
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} KDC Management (Controller)}             \\
+		\hline
+		\textbf{Responsibility:}                             & \textbf{Collaborators:}  \\
+		\hline
+		Knows System Management	         			         & System Management         \\
+		Knows Key Update Notifications						 & Key Update Notifications  \\
+		Knows KDC Generator									 & KDC Generator             \\
+
+
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} Key Update Notification (Boundary)}             \\
+		\hline
+		\textbf{Responsibility:}                             & \textbf{Collaborators:}  \\
+		\hline
+		Knows System Management	         			         & System Management         \\
+		Handles New Key Update Notifications				 &						     \\
+
+
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+		\hline
+		\multicolumn{2}{|l|}{\textbf{Class Name:} KDC Generator (Entity)}             \\
+		\hline
+		\textbf{Responsibility:}                             & \textbf{Collaborators:}  \\
+		\hline
+		Knows System Management	         			         & System Management         \\
+		Knows KDC key generation process      				 &						     \\
+
+
+		\hline
+	\end{tabular}
+\end{table}
+
 % End Section
 \clearpage
 \newpage
